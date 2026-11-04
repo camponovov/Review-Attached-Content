@@ -1,0 +1,11 @@
+{
+  "title": "Guida HR per Il Nido",
+  "description": "A web application designed to help users access and interact with the content provided.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
