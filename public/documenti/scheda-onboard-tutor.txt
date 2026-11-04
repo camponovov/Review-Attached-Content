@@ -1,0 +1,21 @@
+SCHEDA ONBOARD · USO INTERNO
+
+Nome e cognome: [Nome]
+Ruolo / percorso: [Ruolo]
+Sede: [Sede]
+Data di avvio: [Data]
+Tutor: [Tutor]
+Responsabile Onboard: [Responsabile]
+
+Agenda della settimana: [Link o riferimento]
+Obiettivi e attività previste: [Sintesi]
+Accessi — solo stato, mai password:
+- Real Smart: [Richiesto / Attivo / Bloccato]
+- Google Drive / N-Space: [Richiesto / Attivo / Bloccato]
+- Forte: [Predisposto / Attivo / Bloccato]
+- Origin: [Predisposto / Attivo / Bloccato]
+
+Osservazioni per l’affiancamento: [Fatti osservabili, non dati personali]
+Check tutor: [Martedì 18:00] [Giovedì 18:00]
+Valutazioni: [Nido Academy] [Forte Academy] [Checklist Forte]
+Esito finale e motivazione: [Da compilare venerdì]
