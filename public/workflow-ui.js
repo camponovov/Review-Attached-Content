@@ -3,7 +3,7 @@
 
   var PROCEDURE_IDS = [
     'p1', 'p2', 'p3', 'p4', 'p5', 'p8', 'p12', 'p7', 'p11', 'pB', 'pF',
-    'pG', 'p13', 'p14', 'p15', 'p6', 'p9', 'p10', 'pj1', 'pj2', 'pj3',
+    'pG', 'p13', 'p14', 'p15', 'p6', 'p9', 'pj1', 'pj2', 'pj3',
   ]
   var PROGRESS_KEY = 'nidoHrProcedureProgressV1'
   var TEXT_RESOURCES = {
@@ -309,7 +309,7 @@
   var procedureProgress = read(PROGRESS_KEY, {})
 
   function enhanceProcedure(panel) {
-    if (!panel || panel.dataset.procedureEnhanced) return
+    if (!panel || panel.dataset.procedureEnhanced || panel.dataset.procedureGuide === 'off') return
     panel.dataset.procedureEnhanced = 'true'
     var candidates = Array.prototype.slice.call(
       panel.querySelectorAll(':scope > h2, :scope > details'),
