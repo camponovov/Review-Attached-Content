@@ -5,7 +5,6 @@ Ruolo / percorso: [Ruolo]
 Sede: [Sede]
 Data di avvio: [Data]
 Tutor: [Tutor]
-Responsabile Onboard: [Responsabile]
 
 Agenda della settimana: [Link o riferimento]
 Obiettivi e attività previste: [Sintesi]

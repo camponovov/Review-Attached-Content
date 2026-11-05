@@ -138,7 +138,7 @@ body.jg .tip{border-left-color:var(--lime)}
 .ops-field input:not([type=checkbox]):not([type=range]),.ops-field select,.ops-field textarea{width:100%;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:13px;padding:9px 11px;font:500 14px Inter,sans-serif}
 .ops-field textarea{min-height:150px;resize:vertical}.ops-field input[type=range]{margin:7px 0}
 .ops-inline{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.ops-check{display:flex;align-items:flex-start;gap:8px;font-size:13px}.ops-check input{width:18px;height:18px;accent-color:var(--slate);flex:none}
-.ops-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.ops-note{font-size:12px;color:var(--muted)}
+.ops-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.ops-note{font-size:12px;color:var(--muted)}.chk-action-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:6px 0}.chk-action-row .chk{flex:1;margin:0}.chk-action-row .btn{flex:none}
 .ops-alert{border:1px solid #d9a52b;background:#fff1cf;color:#5c4000;border-radius:16px;padding:14px 18px;margin:14px 0}.ops-alert.ok{border-color:#88ad32;background:var(--limebg);color:var(--ink)}
 .ops-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.ops-tabs button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 15px;font:600 13px Inter,sans-serif;cursor:pointer}.ops-tabs button.on{background:var(--slate);color:#fff}
 .task-row{display:grid;grid-template-columns:minmax(180px,1fr) auto;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px;margin:10px 0}
@@ -159,6 +159,22 @@ body.jg .tip{border-left-color:var(--lime)}
 @media(max-width:700px){.ops-form{grid-template-columns:1fr}.ops-field.wide{grid-column:auto}.task-row{grid-template-columns:1fr}.agenda-board{grid-template-columns:repeat(7,78vw)}.dash-grid{grid-template-columns:1fr}.dash-hero{align-items:flex-start;flex-direction:column}.learning-summary{grid-template-columns:1fr}.area-sections{grid-template-columns:1fr}}
 @media(max-width:900px){.home-map,.week-path{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.home-map,.week-path{grid-template-columns:1fr}}
+.mansionario-hero{background:linear-gradient(135deg,var(--slate2),var(--slate));color:#fff;border-radius:var(--r);padding:28px;margin-bottom:18px}
+.mansionario-hero h1{color:#fff}.mansionario-hero .lead{color:#e0e8e9;max-width:760px;margin:0}
+.mansionario-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.mansionario-card{margin:0}.mansionario-card h2{margin:0 0 8px;display:flex;align-items:center;gap:9px}
+.mansionario-card h2 span{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:var(--limebg);font-size:15px}
+.mansionario-card p{font-size:14px;color:var(--muted);margin:7px 0}
+.mansionario-card ul{font-size:14px}.mansionario-card li{margin:7px 0}
+.mansionario-card .contact-list{list-style:none;padding:0;margin:8px 0}
+.mansionario-card .contact-list li{padding:9px 0;border-bottom:1px solid var(--line);margin:0}
+.contact-list small{display:block;color:var(--muted);font-size:12px}
+.contact-list a{color:inherit;text-decoration:none}.contact-list a:hover{text-decoration:underline}
+.mansionario-wide{grid-column:1/-1}
+.weekly-agenda{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.weekly-agenda article{background:var(--bg);border-radius:14px;padding:12px 14px}
+.weekly-agenda b{display:block;margin-bottom:4px}.weekly-agenda p{margin:5px 0}
+@media(max-width:700px){.mansionario-grid,.weekly-agenda{grid-template-columns:1fr}.mansionario-wide{grid-column:auto}}
 </style>
 </head>
 <body>
@@ -178,8 +194,112 @@ body.jg .tip{border-left-color:var(--lime)}
  </div>
 </header>
 
-<section class="panel on" id="pOS" data-t="Dashboard">
-<div class="dashboard-empty" aria-label="Dashboard vuota"></div>
+<section class="panel" id="pMansionario" data-t="Mansionario HR">
+<div class="mansionario-hero">
+ <h1>Mansionario · Risorse Umane</h1>
+ <p class="lead">Presidio dei processi HR: dalla ricerca e selezione delle persone alla loro gestione, crescita e uscita, in raccordo con manager, consulenti e referenti interni.</p>
+</div>
+<div class="mansionario-grid">
+ <article class="card mansionario-card">
+  <h2><span>01</span> Talent acquisition e selezione</h2>
+  <ul>
+   <li>Raccogliere le esigenze di personale e predisporre gli annunci per le posizioni da seguire.</li>
+   <li>Pubblicare e gestire le ricerche su Indeed e LinkedIn, coordinandosi con Cving per Indeed e CVing.</li>
+   <li>Gestire la prima telefonata, il primo colloquio e, quando necessario, il secondo colloquio.</li>
+   <li>Coordinarsi con il manager di riferimento per organizzare il colloquio finale.</li>
+  </ul>
+  <p><b>Referenti Indeed / Cving</b></p>
+  <ul class="contact-list">
+   <li>Chira Resca <small><a href="mailto:resca@cving.com">resca@cving.com</a></small></li>
+   <li>Francesco Picariello <small><a href="mailto:picarelli@cving.com">picarelli@cving.com</a></small></li>
+  </ul>
+ </article>
+ <article class="card mansionario-card">
+  <h2><span>02</span> Onboarding e inserimento</h2>
+  <ul>
+   <li>Gestire le fasi di Nidotest per le figure in ingresso.</li>
+   <li>Coordinare e seguire il processo di onboarding delle nuove persone.</li>
+   <li>Monitorare i percorsi con tutor e referenti, raccogliendo aggiornamenti e criticità.</li>
+   <li>Tenere allineate le informazioni sullo stato delle persone e dei relativi percorsi.</li>
+  </ul>
+ </article>
+ <article class="card mansionario-card">
+  <h2><span>03</span> Amministrazione del personale</h2>
+  <ul>
+   <li>Mantenere aggiornata la dashboard HR.</li>
+   <li>Curare la consegna dei contratti alle persone interessate.</li>
+   <li>Coordinare con la consulente del lavoro le uscite dei dipendenti e le gestioni contrattuali.</li>
+   <li>Gestire con il referente interno le pratiche contrattuali dei collaboratori subordinati.</li>
+  </ul>
+  <p><b>Consulente del lavoro</b><br><a href="mailto:info@manciniconsulenze.it">info@manciniconsulenze.it</a></p>
+  <p><b>Collaboratori subordinati · Andrea</b><br><a href="mailto:meonia@nido20.com">meonia@nido20.com</a></p>
+ </article>
+ <article class="card mansionario-card">
+  <h2><span>04</span> Piattaforme HR ed employer branding</h2>
+  <ul>
+   <li>Coordinare aggiornamenti e manutenzione di Nido Academy, Forte e N-Space HR con Benedetta ed Elia.</li>
+   <li>Coordinarsi con Fulvio per gli aggiornamenti della pagina “Lavora con noi”.</li>
+  </ul>
+  <p><b>Nido Academy, Forte e N-Space HR</b></p>
+  <ul class="contact-list">
+   <li><b>Benedetta </b><br><a href="mailto:pecciantib@nido20.com">pecciantib@nido20.com</a></li>
+   <li><b>Elia </b><br><a href="mailto:lorenzie@nido20.com">lorenzie@nido20.com</a></li>
+  </ul>
+  <p><b>Pagina “Lavora con noi” · Fulvio</b><br><a href="mailto:scuterif@nido20.com">scuterif@nido20.com</a></p>
+ </article>
+ <article class="card mansionario-card mansionario-wide">
+  <h2><span>05</span> Formazione e sviluppo</h2>
+  <div class="mansionario-grid">
+   <div>
+    <ul>
+     <li>Coordinarsi internamente con Gualandi per registrare le sessioni formative.</li>
+     <li>Contattare i formatori per concordare orari, contenuti e materiali.</li>
+     <li>Ordinare o predisporre la stanza entro un’ora prima dell’inizio della formazione.</li>
+    </ul>
+    <p><b>Registrazioni · Gualandi</b><br><a href="mailto:gualandif@nido20.com">gualandif@nido20.com</a></p>
+   </div>
+   <div>
+    <p><b>Formatori e contatti</b></p>
+    <ul class="contact-list">
+     <li>Yari Pancrazi <small><a href="mailto:studio@notaiopancrazi.it">studio@notaiopancrazi.it</a></small></li>
+     <li>Gaia Galli <small><a href="mailto:avv.gaiagalli@gmail.com">avv.gaiagalli@gmail.com</a> · <a href="tel:+393485185698">348 518 5698</a></small></li>
+     <li>Luca Torcivia <small><a href="tel:+393473242387">347 324 2387</a></small></li>
+     <li>Luca Bozzato <small><a href="tel:+393920160217">392 016 0217</a></small></li>
+     <li>Matteo Arcangeli <small><a href="tel:+393343263604">334 326 3604</a></small></li>
+     <li>Mario Muscariello <small><a href="tel:+393355496265">335 549 6265</a></small></li>
+     <li>Stefano Bartoli <small><a href="mailto:s.bartoli@centroditerapiastrategica.com">s.bartoli@centroditerapiastrategica.com</a></small></li>
+    </ul>
+   </div>
+  </div>
+ </article>
+ <article class="card mansionario-card">
+  <h2><span>06</span> Monitoraggio e coordinamento</h2>
+  <ul>
+   <li>Condividere con il CEO aggiornamenti e priorità delle attività HR.</li>
+   <li>Partecipare al coordinamento delle piattaforme Nido Academy e Forte.</li>
+   <li>Monitorare con Marco, tutor e onboarding l’avanzamento dei percorsi.</li>
+   <li>Fare follow-up ai commerciali sugli appuntamenti in agenda.</li>
+   <li>Partecipare alle classi live di The Job Game con Lisa Raglione.</li>
+  </ul>
+ </article>
+ <article class="card mansionario-card">
+  <h2><span>07</span> Eventi e inaugurazioni</h2>
+  <p>Organizzare un momento di allineamento per la pianificazione e il coordinamento di eventi e inaugurazioni.</p>
+  <p><b>Referenti</b></p>
+  <ul class="contact-list">
+   <li>Fondatori <small><a href="mailto:fondatorif@nido20.com">fondatorif@nido20.com</a></small></li>
+   <li>Zanellati <small><a href="mailto:zanellatim@nido20.com">zanellatim@nido20.com</a></small></li>
+  </ul>
+ </article>
+ <article class="card mansionario-card mansionario-wide">
+  <h2><span>08</span> Appuntamenti ricorrenti</h2>
+  <div class="weekly-agenda">
+   <article><b>Lunedì</b><p>10:30–11:00 · Check HR con il CEO</p><p>17:30–18:00 · Check HR con il CEO</p></article>
+   <article><b>Mercoledì</b><p>11:00–12:00 · Classi live di The Job Game con Lisa Raglione</p><p>16:00–16:30 · Check piattaforme Nido Academy e Forte con Macaluso, Castelli, Elia e Marco</p><p>Follow-up ai commerciali sugli appuntamenti in agenda</p></article>
+   <article><b>Venerdì</b><p>16:00 · Call con Marco, tutor e onboarding per monitorare i percorsi</p><p>Follow-up ai commerciali sugli appuntamenti in agenda</p></article>
+  </div>
+ </article>
+</div>
 </section>
 
 <section class="panel" id="pTasks" data-t="Attività">
@@ -190,7 +310,7 @@ body.jg .tip{border-left-color:var(--lime)}
 <section class="panel" id="pProcedures" data-t="Procedure">
 <h1>Procedure</h1><p class="lead">Scegli l’area di lavoro. Ogni procedura mostra obiettivo, passaggi, materiali, note e avanzamento salvato.</p>
 <h2>Talent Acquisition</h2><div class="hub-grid"><button class="card hub-card" data-go="p1"><b>Annunci</b><span>Pubblicazione e requisiti.</span></button><button class="card hub-card" data-go="p2"><b>Gestione candidature</b><span>Contatto e aggiornamento N-Space.</span></button><button class="card hub-card" data-go="p3"><b>Colloqui</b><span>Domande e criteri di valutazione.</span></button><button class="card hub-card" data-go="p4"><b>Nido Bias Free</b><span>Valutazione strutturata.</span></button><button class="card hub-card" data-go="p5"><b>Comunicazioni</b><span>E-mail e feedback.</span></button></div>
-<h2>People &amp; Culture</h2><div class="hub-grid"><button class="card hub-card" data-go="p12"><b>Valori e cultura</b><span>Comportamenti e leadership.</span></button><button class="card hub-card" data-go="p7"><b>Contratti e dotazioni</b><span>Compensi, crescita e dispositivi.</span></button><button class="card hub-card" data-go="p11"><b>Time-Off</b><span>Ferie, permessi e malattia.</span></button><button class="card hub-card" data-go="pG"><b>Governance e clima</b><span>Monitoraggio e agende.</span></button><button class="card hub-card" data-go="p13"><b>Conflitti</b><span>Gestione a gradini.</span></button><button class="card hub-card" data-go="p14"><b>Nido Exit</b><span>Uscite e sicurezza.</span></button></div>
+<h2>People &amp; Culture</h2><div class="hub-grid"><button class="card hub-card" data-go="p12"><b>Valori e cultura</b><span>Comportamenti e leadership.</span></button><button class="card hub-card" data-go="p7"><b>Contratti e dotazioni</b><span>Compensi, crescita e dispositivi.</span></button><button class="card hub-card" data-go="p11"><b>Time-Off</b><span>Ferie, permessi e malattia.</span></button><button class="card hub-card" data-go="p13"><b>Conflitti</b><span>Gestione a gradini.</span></button><button class="card hub-card" data-go="p14"><b>Nido Exit</b><span>Uscite e sicurezza.</span></button><button class="card hub-card" data-go="pAreaPeople"><b>Governance, clima e agende</b><span>NIDEX, questionari e coordinamento operativo.</span></button></div>
 <h2>Learning &amp; Development</h2><div class="hub-grid"><button class="card hub-card" data-go="p6"><b>Onboarding e Nido Test</b><span>Avvio, tutor e materiali.</span></button><button class="card hub-card" data-go="p9"><b>Forte e Nido Academy</b><span>Valutazione e crescita.</span></button><button class="card hub-card" data-go="p10"><b>Formazione ed eventi</b><span>Calendario e Role Play.</span></button></div>
 <h2>The Job Game</h2><div class="hub-grid"><button class="card hub-card" data-go="pj1"><b>Il test</b><span>Funzionamento e utilizzo.</span></button><button class="card hub-card" data-go="pj2"><b>Psicotrappole</b><span>Lettura dei comportamenti.</span></button><button class="card hub-card" data-go="pj3"><b>Psicosoluzioni</b><span>Interventi e sviluppo.</span></button></div>
 <h2>Procedure create dai template</h2><div id="customProcedureHub" class="hub-grid"></div>
@@ -209,13 +329,13 @@ body.jg .tip{border-left-color:var(--lime)}
 <h2>I miei flussi e documenti</h2><div id="templateInstances" class="hub-grid"></div>
 <h2>Archivio documenti</h2>
 <div class="hub-grid">
- <div class="card document-card"><b>Onboarding</b><p class="ops-note">Percorso e template operativi.</p><a class="btn line" href="/documenti/da-onboard-a-real-estate.pdf">Da Onboard a Real Estate</a><button class="btn line" data-text-resource="email-raccolta-dati">E-mail raccolta dati</button><button class="btn line" data-text-resource="scheda-onboard-tutor">Scheda tutor</button><button class="btn line" data-text-resource="messaggio-standard-tutor">Messaggio tutor</button></div>
- <div class="card document-card"><b>Academy</b><p class="ops-note">Materiali dei tre livelli.</p><a class="btn line" href="/documenti/materiale-level-1.pdf" target="_blank">Level 1</a><a class="btn line" href="/documenti/materiale-level-2.pdf" target="_blank">Level 2</a><a class="btn line" href="/documenti/materiale-level-3.pdf" target="_blank">Level 3</a></div>
- <div class="card document-card"><b>Selezione e clima</b><p class="ops-note">Supporti per colloqui e monitoraggio.</p><a class="btn line" href="/documenti/foglio-raffica.pdf" target="_blank">Foglio Raffica</a><a class="btn line" href="/documenti/questionario-clima.pdf" target="_blank">Questionario clima</a></div>
- <div class="card document-card"><b>Nido Exit</b><p class="ops-note">Checklist e modulo operativo.</p><a class="btn line" href="/documenti/checklist-uscita.html" target="_blank">Checklist uscita</a><a class="btn line" href="/documenti/modulo-nido-exit.html" target="_blank">Modulo Nido Exit</a></div>
- <div class="card document-card"><b>PDF di sistema</b><p class="ops-note">Istruzioni, controlli, modelli e riepilogo generati dal progetto.</p><a class="btn line" href="/documenti/istruzioni-guida-hr.pdf">Istruzioni</a><a class="btn line" href="/documenti/checklist-controllo-processo-hr.pdf">Checklist controllo</a><a class="btn line" href="/documenti/modelli-operativi-hr.pdf">Modelli operativi</a><a class="btn line" href="/documenti/riepilogo-processo-hr.pdf">Riepilogo processo</a></div>
- <div class="card document-card"><b>Media e modelli</b><p class="ops-note">Risorse locali e dipendenze esterne dichiarate.</p><a class="btn line" href="/documenti/nidos-game.mp4">Nido’s Game</a><a class="btn line" href="/documenti/nido-hr-evolution-path.pdf">NIDO HR EVOLUTION PATH</a><a class="btn line" href="https://canva.link/mcjfmarekyu81po">Badge agenti</a><a class="btn line" href="https://canva.link/xc228yaletu2y7q">Nido R(Evolution)</a></div>
- <div class="card document-card missing"><b>Documenti da fornire</b><p class="ops-note">Checklist raccolta dati Onboard e procedura Banca Dati HR e profili non sono ancora disponibili.</p><a class="btn line" href="/documenti/index.html" target="_blank">Vedi dettaglio</a></div>
+ <div class="card document-card"><b>Onboarding</b><p class="ops-note">Percorso e template operativi.</p><a class="btn line" href="./documenti/da-onboard-a-real-estate.pdf">Da Onboard a Real Estate</a><button class="btn line" data-text-resource="email-raccolta-dati">Raccolta dati · Onboard</button><button class="btn line" data-text-resource="messaggio-benvenuto-onboard">Benvenuto dopo Check Academy</button><button class="btn line" data-text-resource="ticket-elia-account">Dati ticket · Elia</button><button class="btn line" data-text-resource="agenda-pippo-realsmart">Dati agenda · Pippo</button><button class="btn line" data-text-resource="scheda-onboard-tutor">Scheda tutor</button><button class="btn line" data-text-resource="messaggio-standard-tutor">Messaggio tutor</button></div>
+ <div class="card document-card"><b>Academy</b><p class="ops-note">Materiali dei tre step successivi al Nido Test.</p><a class="btn line" href="./documenti/materiale-level-1.pdf" target="_blank">Step 1</a><a class="btn line" href="./documenti/materiale-level-2.pdf" target="_blank">Step 2</a><a class="btn line" href="./documenti/materiale-level-3.pdf" target="_blank">Step 3</a></div>
+ <div class="card document-card"><b>Selezione</b><p class="ops-note">Supporti per colloqui e valutazione dei candidati.</p><a class="btn line" href="./documenti/foglio-raffica.pdf" target="_blank">Foglio Raffica</a></div>
+ <div class="card document-card"><b>Nido Exit</b><p class="ops-note">Checklist e modulo operativo.</p><a class="btn line" href="./documenti/checklist-uscita.html" target="_blank">Checklist uscita</a><a class="btn line" href="./documenti/modulo-nido-exit.html" target="_blank">Modulo Nido Exit</a></div>
+ <div class="card document-card"><b>PDF di sistema</b><p class="ops-note">Istruzioni, controlli, modelli e riepilogo generati dal progetto.</p><a class="btn line" href="./documenti/istruzioni-guida-hr.pdf">Istruzioni</a><a class="btn line" href="./documenti/checklist-controllo-processo-hr.pdf">Checklist controllo</a><a class="btn line" href="./documenti/modelli-operativi-hr.pdf">Modelli operativi</a><a class="btn line" href="./documenti/riepilogo-processo-hr.pdf">Riepilogo processo</a></div>
+ <div class="card document-card"><b>Media e modelli</b><p class="ops-note">Risorse locali e dipendenze esterne dichiarate.</p><a class="btn line" href="./documenti/nidos-game.mp4">Nido’s Game</a><a class="btn line" href="./documenti/nido-hr-evolution-path.pdf">NIDO HR EVOLUTION PATH</a><a class="btn line" href="https://canva.link/mcjfmarekyu81po">Badge agenti</a><a class="btn line" href="https://canva.link/xc228yaletu2y7q">Nido R(Evolution)</a></div>
+ <div class="card document-card missing"><b>Documenti da fornire</b><p class="ops-note">Checklist raccolta dati Onboard e procedura Banca Dati HR e profili non sono ancora disponibili.</p><a class="btn line" href="./documenti/index.html" target="_blank">Vedi dettaglio</a></div>
 </div>
 <h2>Inventario verificabile</h2><div id="documentInventory" class="card scroll"></div>
 <h2>Dipendenze e accessi</h2><div id="dependencyInventory" class="hub-grid"></div>
@@ -237,13 +357,13 @@ body.jg .tip{border-left-color:var(--lime)}
   <details class="ta-inline-details" id="ta-detail-1"><summary>Apri job analysis e scheda</summary><div class="in"><p>Raccogli obiettivi, responsabilità, KPI, requisiti indispensabili e preferenziali, competenze, sede, orari, autonomia e condizioni approvate. Chiarisci anche gli aspetti realistici del ruolo da condividere con il candidato.</p><button class="btn" type="button" data-copy="ta-job-analysis-template">Copia scheda job analysis</button><div class="ta-step-navigation"><button type="button" data-ta-next="ta-detail-2">Avanti · Annuncio →</button></div></div></details>
   </li>
   <li><b>Prepara e pubblica l’annuncio.</b> Usa i requisiti approvati dal manager e trasferiscili nel template ufficiale The Job Game.
-  <details class="ta-inline-details" id="ta-detail-2"><summary>Apri traccia, accessi e canali</summary><div class="in"><p>La traccia qui sotto è un supporto: il file del template originale non è presente nella cartella Documenti, quindi prima di pubblicare confrontala con il modello ufficiale.</p><button class="btn" type="button" data-copy="ta-ad-template">Copia traccia annuncio</button><h4>Accessi piattaforme</h4><p>LinkedIn: meonim@ilnidoimmobiliare.it · Password: LuviFerruccio26!<br>Indeed: recruiting@nido20.com · Password: Recruiting26$</p><a class="btn line" href="https://www.linkedin.com/" target="_blank" rel="noopener">Apri LinkedIn</a> <a class="btn line" href="https://it.indeed.com/" target="_blank" rel="noopener">Apri Indeed</a><div class="ta-step-navigation"><button type="button" data-ta-next="ta-detail-3">Avanti · Candidature →</button></div></div></details>
+  <details class="ta-inline-details" id="ta-detail-2"><summary>Apri traccia, accessi e canali</summary><div class="in"><p>La traccia qui sotto è un supporto: il file del template originale non è presente nella cartella Documenti, quindi prima di pubblicare confrontala con il modello ufficiale.</p><button class="btn" type="button" data-copy="ta-ad-template">Copia traccia annuncio</button><h4>Accessi piattaforme</h4><p>Usa il gestore password aziendale per recuperare gli accessi. Non inserire credenziali nella guida o in documenti condivisi.</p><a class="btn line" href="https://www.linkedin.com/" target="_blank" rel="noopener">Apri LinkedIn</a> <a class="btn line" href="https://it.indeed.com/" target="_blank" rel="noopener">Apri Indeed</a><div class="ta-step-navigation"><button type="button" data-ta-next="ta-detail-3">Avanti · Candidature →</button></div></div></details>
   </li>
   <li><b>Registra e valuta le candidature.</b> Carica ogni CV in N-Space HR e confronta i requisiti con la job analysis.
   <details class="ta-inline-details" id="ta-detail-3"><summary>Apri indicazioni e messaggi di primo contatto</summary><div class="in"><p>Registra il candidato nella posizione corretta, annota i requisiti verificati e aggiorna stato, note e date dei colloqui. La griglia Nido Bias Free è integrata in N-Space HR.</p><p><b>Da registrare:</b> posizione, dati della candidatura nei campi previsti, esito del test, valutazioni e comunicazioni. Non inserire dati personali eccedenti quelli necessari.</p><button class="btn" type="button" data-copy="s1">Copia script telefonata</button> <button class="btn" type="button" data-copy="s2">Copia messaggio WhatsApp</button><div class="ta-step-navigation"><button type="button" data-ta-next="ta-detail-4">Avanti · Test →</button></div></div></details>
   </li>
   <li><b>Invia il test The Job Game.</b> Dopo la compilazione, consulta il report e registra la valutazione.
-  <details class="ta-inline-details" id="ta-detail-4"><summary>Apri test e istruzioni</summary><div class="in"><p>Accedi alla piattaforma e invia il test. Il test richiede circa 15 minuti; il report evidenzia tendenze da approfondire nel colloquio, non costituisce da solo un verdetto.</p><p>Account HR: recruiting@nido20.com · Password: Recruiting26$</p>
+  <details class="ta-inline-details" id="ta-detail-4"><summary>Apri test e istruzioni</summary><div class="in"><p>Accedi alla piattaforma e invia il test. Il test richiede circa 15 minuti; il report evidenzia tendenze da approfondire nel colloquio, non costituisce da solo un verdetto.</p><p>Per le credenziali HR, consulta il gestore password aziendale; non conservarle nella guida.</p>
 
 <div class="ta-step-navigation"><button type="button" data-ta-next="ta-detail-5">Avanti · Colloqui →</button></div></div></details>
   </li>
@@ -252,18 +372,19 @@ body.jg .tip{border-left-color:var(--lime)}
 2. Quali risultati hai ottenuto e come li hai raggiunti?
 3. Quali responsabilità e attività ti hanno interessato maggiormente?
 4. Che cosa cerchi nel prossimo incarico?
-5. Quali condizioni o informazioni ti servono per valutare la posizione?</div><button class="btn" type="button" data-copy="ta-interview-quick-template">Copia traccia colloquio</button><div class="ta-profile-specific" data-ta-profile-content="commercial"><button class="btn" type="button" data-copy="eL1">Copia e-mail dopo colloquio HR</button> <a class="btn line" href="/documenti/materiale-level-1.pdf" target="_blank" rel="noopener">Apri PDF Level 1</a></div><div class="ta-profile-specific" data-ta-profile-content="corporate" hidden><p>Registra l’esito secondo i criteri concordati nella job analysis e prepara il colloquio con il manager.</p></div>
+5. Quali condizioni o informazioni ti servono per valutare la posizione?</div><button class="btn" type="button" data-copy="ta-interview-quick-template">Copia traccia colloquio</button><div class="ta-profile-specific" data-ta-profile-content="commercial"><button class="btn" type="button" data-copy="eL1">Copia e-mail dopo colloquio HR</button> <a class="btn line" href="./documenti/materiale-level-1.pdf" target="_blank" rel="noopener">Apri PDF Level 1</a></div><div class="ta-profile-specific" data-ta-profile-content="corporate" hidden><p>Registra l’esito secondo i criteri concordati nella job analysis e prepara il colloquio con il manager.</p></div>
 <details class="ta-question-bank"><summary>Domande del primo colloquio HR</summary><div class="in"><div class="ta-question-carousel" id="ta-inline-l1" role="group" aria-label="Domande del primo colloquio"><div class="ta-question-meta"><span data-question-number aria-live="polite"></span><b data-question-category></b></div><p class="ta-question-text" data-question-text></p><p class="ta-question-note" data-question-note></p><div class="ta-question-controls"><button type="button" data-question-prev aria-label="Domanda precedente" title="Domanda precedente">←</button><button type="button" data-question-next aria-label="Domanda successiva" title="Domanda successiva">→</button></div></div></div></details>
+<div class="ta-profile-specific" data-ta-profile-content="commercial"><details class="ta-question-bank"><summary>Domande standard del secondo colloquio commerciale</summary><div class="in"><div class="ta-question-carousel" id="ta-inline-l2" role="group" aria-label="Domande standard del secondo colloquio commerciale"><div class="ta-question-meta"><span data-question-number aria-live="polite"></span><b data-question-category></b></div><p class="ta-question-text" data-question-text></p><p class="ta-question-note" data-question-note></p><div class="ta-question-controls"><button type="button" data-question-prev aria-label="Domanda precedente" title="Domanda precedente">←</button><button type="button" data-question-next aria-label="Domanda successiva" title="Domanda successiva">→</button></div></div></div></details><details class="ta-question-bank"><summary>Domande sulle psicotrappole</summary><div class="in"><div class="ta-question-carousel" id="ta-inline-traps" role="group" aria-label="Domande sulle psicotrappole"><div class="ta-question-meta"><span data-question-number aria-live="polite"></span><b data-question-category></b></div><p class="ta-question-text" data-question-text></p><p class="ta-question-note" data-question-note></p><div class="ta-question-controls"><button type="button" data-question-prev aria-label="Domanda precedente" title="Domanda precedente">←</button><button type="button" data-question-next aria-label="Domanda successiva" title="Domanda successiva">→</button></div></div></div></details></div>
 <div class="ta-step-navigation"><button type="button" data-ta-next="ta-detail-6">Avanti · Confronto finale →</button></div>
 </div></details>
   </li>
   <li><b>Organizza il confronto finale.</b>
   <div class="ta-profile-specific" data-ta-profile-content="commercial">Fissa il confronto con Marco.</div>
   <div class="ta-profile-specific" data-ta-profile-content="corporate" hidden>Fissa il confronto con il manager.</div>
-  <details class="ta-inline-details" id="ta-detail-6"><summary>Apri materiali per il confronto finale</summary><div class="in"><div class="ta-profile-specific" data-ta-profile-content="commercial"><p>Il confronto finale dei Commerciali è con Marco. Condividi report e valutazioni, consulta le domande del secondo colloquio e usa la presentazione Nido R(Evolution).</p><details class="ta-question-bank"><summary>Domande standard del secondo colloquio commerciale</summary><div class="in"><div class="ta-question-carousel" id="ta-inline-l2" role="group" aria-label="Domande standard del secondo colloquio commerciale"><div class="ta-question-meta"><span data-question-number aria-live="polite"></span><b data-question-category></b></div><p class="ta-question-text" data-question-text></p><p class="ta-question-note" data-question-note></p><div class="ta-question-controls"><button type="button" data-question-prev aria-label="Domanda precedente" title="Domanda precedente">←</button><button type="button" data-question-next aria-label="Domanda successiva" title="Domanda successiva">→</button></div></div></div></details><details class="ta-question-bank"><summary>Domande sulle psicotrappole</summary><div class="in"><div class="ta-question-carousel" id="ta-inline-traps" role="group" aria-label="Domande sulle psicotrappole"><div class="ta-question-meta"><span data-question-number aria-live="polite"></span><b data-question-category></b></div><p class="ta-question-text" data-question-text></p><p class="ta-question-note" data-question-note></p><div class="ta-question-controls"><button type="button" data-question-prev aria-label="Domanda precedente" title="Domanda precedente">←</button><button type="button" data-question-next aria-label="Domanda successiva" title="Domanda successiva">→</button></div></div></div></details><a class="btn line" href="https://canva.link/xc228yaletu2y7q" target="_blank" rel="noopener">Apri Nido R(Evolution)</a> <button class="btn" type="button" data-copy="eL2">Copia e-mail prima del colloquio finale</button> <a class="btn line" href="/documenti/materiale-level-2.pdf" target="_blank" rel="noopener">Apri PDF Level 2</a></div><div class="ta-profile-specific" data-ta-profile-content="corporate" hidden><p>Il confronto finale del Corporate è con il manager. Usate la job analysis definita all’apertura della selezione per confrontare competenze, risultati attesi e priorità. Registra la valutazione e concorda con il manager materiali e comunicazioni da inviare.</p></div><div class="ta-step-navigation"><button type="button" data-ta-next="ta-detail-7">Avanti · Esito →</button></div></div></details>
+  <details class="ta-inline-details" id="ta-detail-6"><summary>Apri materiali per il confronto finale</summary><div class="in"><div class="ta-profile-specific" data-ta-profile-content="commercial"><p>Condividi con Marco report e valutazioni del candidato e usa la presentazione Nido R(Evolution) per il confronto finale.</p><a class="btn line" href="https://canva.link/xc228yaletu2y7q" target="_blank" rel="noopener">Apri Nido R(Evolution)</a> <button class="btn" type="button" data-copy="eL2">Copia e-mail prima del colloquio finale</button> <a class="btn line" href="./documenti/materiale-level-2.pdf" target="_blank" rel="noopener">Apri PDF Level 2</a></div><div class="ta-profile-specific" data-ta-profile-content="corporate" hidden><p>Il confronto finale del Corporate è con il manager. Usate la job analysis definita all’apertura della selezione per confrontare competenze, risultati attesi e priorità. Registra la valutazione e concorda con il manager materiali e comunicazioni da inviare.</p></div><div class="ta-step-navigation"><button type="button" data-ta-next="ta-detail-7">Avanti · Esito →</button></div></div></details>
   </li>
   <li><b>Registra l’esito e comunica al candidato.</b> Aggiorna N-Space HR e invia la comunicazione appropriata.
-  <details class="ta-inline-details" id="ta-detail-7"><summary>Apri e-mail e documenti conclusivi</summary><div class="in"><p>Invia un riscontro chiaro, aggiorna l’esito in N-Space HR e gestisci il CV secondo le regole aziendali di conservazione.</p><button class="btn" type="button" data-copy="eL3">Copia e-mail dopo colloquio finale</button> <button class="btn line" type="button" data-copy="e2">Copia rifiuto</button><p><a class="btn line" href="/documenti/materiale-level-3.pdf" target="_blank" rel="noopener">Apri PDF Level 3</a></p><p class="ta-process-finish">Fine del percorso di selezione.</p></div></details>
+  <details class="ta-inline-details" id="ta-detail-7"><summary>Apri e-mail e documenti conclusivi</summary><div class="in"><p>Invia un riscontro chiaro, aggiorna l’esito in N-Space HR e gestisci il CV secondo le regole aziendali di conservazione.</p><button class="btn" type="button" data-copy="eL3">Copia e-mail dopo colloquio finale</button> <button class="btn line" type="button" data-copy="e2">Copia rifiuto</button><p><a class="btn line" href="./documenti/materiale-level-3.pdf" target="_blank" rel="noopener">Apri PDF Level 3</a></p><p class="ta-process-finish">Fine del percorso di selezione.</p></div></details>
   </li>
  </ol>
   </section>
@@ -273,7 +394,7 @@ body.jg .tip{border-left-color:var(--lime)}
   <article class="ta-material"><h3>Profilo e annuncio</h3><button class="btn" type="button" data-copy="ta-job-analysis-template">Copia job analysis</button><button class="btn line" type="button" data-copy="ta-ad-template">Copia traccia annuncio</button><a class="btn line" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a><a class="btn line" href="https://it.indeed.com/" target="_blank" rel="noopener">Indeed</a><p class="ta-material-note">La traccia annuncio è un supporto: il template originale The Job Game non è presente nei file del progetto.</p></article>
   <article class="ta-material"><h3>The Job Game</h3><a class="btn lime" href="https://nido20.thejobgame.it" target="_blank" rel="noopener">Apri piattaforma</a><p class="ta-material-note">Credenziali HR indicate nel dettaglio del passaggio 4.</p></article>
   <article class="ta-material"><h3>Contatto e colloqui</h3><button class="btn line" type="button" data-copy="s1">Copia prima telefonata</button><button class="btn line" type="button" data-copy="s2">Copia WhatsApp</button><button class="btn line" type="button" data-copy="s3">Copia apertura colloquio HR</button><button class="btn line" type="button" data-copy="s4">Copia chiusura positiva HR</button><button class="btn line" type="button" data-copy="s4no">Copia riscontro HR</button><div class="ta-profile-specific" data-ta-profile-content="commercial"><button class="btn line" type="button" data-copy="sL2opening">Copia apertura secondo colloquio</button><button class="btn line" type="button" data-copy="sL2yes">Copia chiusura positiva con Marco</button><button class="btn line" type="button" data-copy="sL2no">Copia riscontro secondo colloquio</button></div></article>
-  <article class="ta-material"><h3>Documenti e comunicazioni</h3><div class="ta-profile-specific" data-ta-profile-content="commercial"><a class="btn line" href="/documenti/materiale-level-1.pdf" target="_blank" rel="noopener">PDF Level 1</a><a class="btn line" href="/documenti/materiale-level-2.pdf" target="_blank" rel="noopener">PDF Level 2</a><a class="btn line" href="https://canva.link/xc228yaletu2y7q" target="_blank" rel="noopener">Nido R(Evolution)</a></div><a class="btn line" href="/documenti/materiale-level-3.pdf" target="_blank" rel="noopener">PDF Level 3</a><button class="btn line" type="button" data-copy="e1">Copia conferma colloquio</button><button class="btn line" type="button" data-copy="eL1">Copia e-mail dopo HR</button><button class="btn line" type="button" data-copy="eL2">Copia e-mail pre-finale</button><button class="btn line" type="button" data-copy="eL3">Copia e-mail finale</button><button class="btn line" type="button" data-copy="e2">Copia rifiuto</button><a class="btn line" href="/documenti/foglio-raffica.pdf" target="_blank" rel="noopener">Foglio Raffica PDF</a><a class="btn line" href="https://docs.google.com/spreadsheets/d/1R9jkeS84Zlw0VDKFg5lVU_Gu9sulUU8YEaIIYiGmPJM/edit?gid=878492186#gid=878492186" target="_blank" rel="noopener">Foglio Raffica online</a></article>
+  <article class="ta-material"><h3>Documenti e comunicazioni</h3><div class="ta-profile-specific" data-ta-profile-content="commercial"><a class="btn line" href="./documenti/materiale-level-1.pdf" target="_blank" rel="noopener">PDF Level 1</a><a class="btn line" href="./documenti/materiale-level-2.pdf" target="_blank" rel="noopener">PDF Level 2</a><a class="btn line" href="https://canva.link/xc228yaletu2y7q" target="_blank" rel="noopener">Nido R(Evolution)</a></div><a class="btn line" href="./documenti/materiale-level-3.pdf" target="_blank" rel="noopener">PDF Level 3</a><button class="btn line" type="button" data-copy="e1">Copia conferma colloquio</button><button class="btn line" type="button" data-copy="eL1">Copia e-mail dopo HR</button><button class="btn line" type="button" data-copy="eL2">Copia e-mail pre-finale</button><button class="btn line" type="button" data-copy="eL3">Copia e-mail finale</button><button class="btn line" type="button" data-copy="e2">Copia rifiuto</button><a class="btn line" href="./documenti/foglio-raffica.pdf" target="_blank" rel="noopener">Foglio Raffica PDF</a><a class="btn line" href="https://docs.google.com/spreadsheets/d/1R9jkeS84Zlw0VDKFg5lVU_Gu9sulUU8YEaIIYiGmPJM/edit?gid=878492186#gid=878492186" target="_blank" rel="noopener">Foglio Raffica online</a></article>
  </div>
 </section></section>
 
@@ -285,7 +406,7 @@ body.jg .tip{border-left-color:var(--lime)}
  <details class="ta-inline-details"><summary>Referral e candidate experience</summary><div class="in"><ul><li>Obiettivo di Referral Rate interno: oltre il 10%.</li><li>Dai un riscontro a tutti i candidati entro sei giorni, inclusi i rifiuti.</li><li>Raccogli il cNPS e usa i feedback per correggere il processo.</li><li>Misura candidature per annuncio, fonte e conversioni prima di decidere quali contenuti replicare.</li></ul></div></details>
  <details class="ta-inline-details"><summary>Controllo prima della pubblicazione</summary><div class="in"><ul><li>Usa linguaggio neutro, senza riferimenti a età o genere.</li><li>Verifica il consenso di chi compare in immagini o video.</li><li>Controlla che range retributivo, requisiti e condizioni siano approvati.</li><li>Conserva i dati di provenienza per confrontare i risultati dei canali.</li></ul></div></details>
 </section>
-<section class="ta-materials" aria-labelledby="eb-materials-title"><h2 id="eb-materials-title">Materiali e documenti</h2><p class="lead">Riferimenti interni disponibili per contenuti e campagne.</p><div class="ta-material-grid"><article class="ta-material"><h3>Contenuti aziendali</h3><p>Nido Today: nuovi ingressi. Eventi: Gran Gala, Raccolta Olive · Nidoil, Torneo Padel, Marco’s Day, Nido’s Day e Cena di Natale.</p></article><article class="ta-material"><h3>Modello per gli annunci</h3><p>Traccia annuncio e job analysis sono materiali interni da utilizzare nella Talent Acquisition.</p></article></div></section>
+<section class="ta-materials" aria-labelledby="eb-materials-title"><h2 id="eb-materials-title">Materiali e documenti</h2><p class="lead">Riferimenti interni disponibili per contenuti e campagne.</p><div class="ta-material-grid"><article class="ta-material"><h3>Progetti Employer Branding</h3><p>Presentazione delle iniziative che si sarebbero volute realizzare.</p><a class="btn lime" href="https://canva.link/b77cryv4yx0wdun" target="_blank" rel="noopener noreferrer">Apri la presentazione dei progetti</a></article><article class="ta-material"><h3>Video recruiting · ispirazioni</h3><p>Raccolta di video di recruiting: esempi che sarebbe interessante rifare in azienda, adattandoli alla nostra cultura e ai ruoli.</p><a class="btn line" href="https://www.moonb.io/blog/best-recruitment-videos?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Guarda gli esempi</a></article><article class="ta-material"><h3>Foto profilo collaboratori</h3><p>Template Canva per preparare le foto profilo dei collaboratori.</p><a class="btn line" href="https://canva.link/czktav7zgsepvpq" target="_blank" rel="noopener noreferrer">Apri il template foto profilo</a></article><article class="ta-material"><h3>Modello per gli annunci</h3><p>Traccia annuncio e job analysis sono materiali interni da utilizzare nella Talent Acquisition.</p></article></div></section>
 </section>
 
 <section class="panel" id="pAreaPayroll" data-t="Payroll & Administration">
@@ -306,19 +427,27 @@ body.jg .tip{border-left-color:var(--lime)}
  <h2 id="nido-test-title">Nido Test</h2>
  <p>Una settimana di prova in cui Onboard e tutor capiscono se la persona può fare questo lavoro, sulla base delle attività svolte e delle valutazioni registrate.</p>
  <div class="tip"><strong>Nel tempo libero</strong>Se non ci sono attività già programmate, l’Onboard può consultare i tutorial disponibili sulla piattaforma Academy.</div>
- <details class="ta-inline-details" open><summary>Prima dell’avvio e primo giorno</summary><div class="in"><ul><li>Verifica il superamento del colloquio finale e la decisione di procedere con il Nido Test.</li><li>Conferma candidato, ruolo, sede, data, tutor, responsabile Onboard e agenda della settimana.</li><li>Verifica che i documenti richiesti siano stati raccolti nel canale aziendale autorizzato.</li><li>Richiedi gli accessi previsti e controllane lo stato: Real Smart, Google Drive, N-Space, Forte e Origin. Non inserire password nelle schede.</li><li>Il primo giorno: accoglienza 09:00–09:15; verifica accessi con Elia 09:20–09:30; consegna Nido Pack; presentazione con Marco; raccolta foto; pranzo aziendale.</li></ul><p>La foto serve a predisporre la comunicazione: la pubblicazione su Nido Today avviene solo dopo esito positivo e consenso.</p></div></details>
- <details class="ta-inline-details"><summary>Programma della settimana</summary><div class="in"><ul><li><b>Lunedì:</b> attività in zona con il responsabile Onboard secondo la sede assegnata; per la prestazione occasionale si applica la procedura Contratti, Compensi e Dotazioni.</li><li><b>Martedì:</b> mattina Academy (Lead Strategy e Nido Bussola); pomeriggio role play e affiancamento; check tutor alle 18:00.</li><li><b>Mercoledì:</b> attività in zona con Academy; caffè con Martina Bragagia alle 17:00.</li><li><b>Giovedì:</b> mattina Academy e telemarketing; role play e affiancamento (visite e servizi foto previsti); check tutor alle 18:00.</li><li><b>Venerdì:</b> check finale alle 16:00; tutor compila la checklist su Forte; HR verifica le valutazioni in Nido Academy e Forte Academy.</li></ul></div></details>
- <details class="ta-inline-details"><summary>Valutazione e decisione di fine settimana</summary><div class="in"><p><b>Tutor:</b> completa checklist su Forte e motiva il risultato. <b>HR:</b> verifica che le valutazioni Nido Academy e Forte Academy siano presenti, complete e coerenti con le osservazioni raccolte.</p><ul><li><b>Esito positivo:</b> conferma il passaggio all’onboarding effettivo e pubblica su Nido Today solo dopo verifica delle valutazioni e del consenso alla foto.</li><li><b>Esito negativo o incompleto:</b> non pubblicare la comunicazione, registra motivo e valutazioni mancanti e informa Onboard e tutor.</li></ul><p class="src">Non sono documentate soglie numeriche aggiuntive per il superamento: non introdurne di nuove.</p></div></details>
+ <div class="card" id="nido-test-preparation"><h3>Preparazione al Nido Test · checklist</h3><div id="kit-nido-test-preparation"></div></div>
+ <details class="ta-inline-details" open><summary>Preparazione e primo giorno di Nido Test</summary><div class="in"><ul><li>Verifica il superamento del colloquio finale e la decisione di procedere con il Nido Test.</li><li>Conferma candidato, ruolo, sede, data, tutor e agenda della settimana.</li><li>Raccogli i dati dell’Onboard con il messaggio dedicato.</li><li>Prima dell’avvio, Filippo Fondatori crea il profilo Real Smart con le attività della settimana già inserite; Elia crea il profilo Google. Non inserire password nelle schede.</li><li>Il giorno del Nido Test, HR crea con l’Onboard i profili N-Space One Stop, Origin, Forte e N-Space HR, chiedendo a Elia di accettarli. HR crea inoltre il profilo Onboard su Nido Academy e Forte e vi assegna i video tutorial.</li><li>È compito HR organizzare l’agenda della prima settimana su Real Smart, coordinandosi con il tutor e i referenti coinvolti.</li><li>Il primo giorno di Nido Test, martedì, comprende accoglienza 09:00–10:00, firma della prestazione e accessi ai profili; le relative attività sono nella checklist dedicata.</li></ul><p>Consegna del Nido Pack, presentazione con Marco, pranzo insieme, foto professionale, badge e comunicazione su Nido Today si svolgono nella distinta giornata di Nido Onboarding dopo esito positivo. <a href="#nido-onboarding-checklist">Vai alla checklist Nido Onboarding</a>.</p></div></details>
+ <details class="ta-inline-details"><summary>Programma della settimana · martedì-venerdì</summary><div class="in"><ul><li><b>Martedì:</b> 09:00–10:00 accoglienza, firma della prestazione e accessi ai profili; 10:00–12:00 zona; 12:00–13:00 Lead Strategy; 14:00–15:00 tutorial; 15:00–18:00 attività con agenti; 18:00 check con il tutor.</li><li><b>Mercoledì:</b> 09:00–12:00 zona; 12:00–13:00 tavola rotonda; 14:00–15:00 tutorial; 15:00–16:00 role play; 16:00–18:00 attività con agenti; 18:00 check con il tutor.</li><li><b>Giovedì:</b> 09:00–12:00 formazione telemarketing; 12:00–13:00 tavola rotonda; 14:00–15:00 tutorial; 15:00–18:00 attività con agenti; 18:00 check con il tutor.</li><li><b>Venerdì:</b> 09:00–12:00 zona; 12:00–13:00 Lead Strategy; 14:00–15:00 tutorial; 15:00–16:00 role play; 16:00–17:00 check con Academy nell’orario prestabilito; 17:00–18:00 attività con agenti; 18:00 check con il tutor.</li></ul></div></details>
+ <details class="ta-inline-details"><summary>Valutazione e decisione di fine settimana</summary><div class="in"><p><b>Tutor:</b> completa checklist su Forte e motiva il risultato. <b>HR:</b> verifica che le valutazioni Nido Academy e Forte Academy siano presenti, complete e coerenti con le osservazioni raccolte.</p><ul><li><b>Esito positivo:</b> conferma il passaggio all’onboarding effettivo e programma la distinta giornata di Nido Onboarding; le attività di quella giornata sono nella checklist dedicata.</li><li><b>Esito negativo o incompleto:</b> non avviare il Nido Onboarding, registra motivo e valutazioni mancanti e informa Onboard e tutor.</li></ul><p class="src">Non sono documentate soglie numeriche aggiuntive per il superamento: non introdurne di nuove.</p></div></details>
 </section>
-<section class="ta-materials" aria-labelledby="nido-test-materials-title"><h2 id="nido-test-materials-title">Materiali e documenti · Nido Test</h2><p class="lead">Risorse di prova e valutazione utilizzate durante la settimana.</p><div class="ta-material-grid"><article class="ta-material"><h3>Nido Test</h3><a class="btn line" href="/documenti/nidos-game.mp4" target="_blank" rel="noopener">Nido’s Game</a><p class="ta-material-note">La checklist di valutazione è compilata dal tutor su Forte; HR verifica anche Nido Academy e Forte Academy.</p></article><article class="ta-material"><h3>Checklist generali</h3><a class="btn line" href="/documenti/checklist-controllo-processo-hr.pdf" target="_blank" rel="noopener">Checklist controllo processo HR</a><p class="ta-material-note">È una checklist di controllo della guida, non sostituisce una checklist ufficiale del Nido Test.</p></article></div></section>
+<section class="ta-materials" aria-labelledby="nido-test-materials-title"><h2 id="nido-test-materials-title">Materiali e documenti · Nido Test</h2><p class="lead">Risorse di prova e valutazione utilizzate durante la settimana.</p><div class="ta-material-grid"><article class="ta-material"><h3>Nido Test</h3><a class="btn line" href="./documenti/nidos-game.mp4" target="_blank" rel="noopener">Nido’s Game</a><p class="ta-material-note">La checklist di valutazione è compilata dal tutor su Forte; HR verifica anche Nido Academy e Forte Academy.</p></article><article class="ta-material"><h3>Checklist generali</h3><a class="btn line" href="./documenti/checklist-controllo-processo-hr.pdf" target="_blank" rel="noopener">Checklist controllo processo HR</a><p class="ta-material-note">È una checklist di controllo della guida, non sostituisce una checklist ufficiale del Nido Test.</p></article></div></section>
 <section class="ta-process area-accordion-list" aria-labelledby="onboarding-effective-title">
  <h2 id="onboarding-effective-title">Onboarding effettivo</h2>
- <p>Parte dopo l’esito positivo del Nido Test e comprende formalizzazione, accessi, agenda, affiancamento e passaggio al percorso Level 1.</p>
- <details class="ta-inline-details" open><summary>Formalizzazione e avvio</summary><div class="in"><ul><li>HR conferma data di ingresso, ruolo, sede, tutor e responsabile.</li><li>Completa raccolta dati e documenti tramite la procedura e i canali autorizzati.</li><li>Per contratto o prestazione occasionale usa la procedura Contratti, Compensi e Dotazioni; non duplicare le relative condizioni in questa scheda.</li><li>Comunica in Nidonboarding l’inserimento effettivo e il tutor assegnato.</li></ul></div></details>
- <details class="ta-inline-details"><summary>Accessi, agenda e tutor</summary><div class="in"><ul><li>Verifica lo stato degli accessi a Real Smart, Google Drive, N-Space, Forte e Origin; registra lo stato, mai le password.</li><li>Condividi agenda, sede, referenti, obiettivi e attività con la persona e il tutor.</li><li>Il tutor usa la scheda Onboard, registra fatti osservabili e completa Check Academy e le valutazioni previste.</li><li>Per dispositivi e dotazioni, segui la procedura aziendale dedicata.</li></ul></div></details>
- <details class="ta-inline-details"><summary>Chiusura dell’avvio</summary><div class="in"><ul><li>Conferma che documenti e accessi siano completi o segnala al referente ciò che resta da fare.</li><li>Con esito positivo, prepara la comunicazione Nido Today verificando il consenso alla foto.</li><li>Conferma tutor, agenda e passaggio al Level 1.</li><li>Archivia e aggiorna le informazioni nei sistemi autorizzati.</li></ul></div></details>
+ <p>Parte dopo l’esito positivo del Nido Test e comprende una distinta giornata di Nido Onboarding, formalizzazione, accessi, agenda, affiancamento e passaggio allo Step 1.</p>
+ <div class="card" id="nido-onboarding-checklist"><h3>Giornata Nido Onboarding · checklist</h3><p>Queste attività si svolgono dopo il Nido Test, non durante la settimana di prova. Per la foto e la comunicazione, verifica il consenso; pubblica su Nido Today solo dopo l’esito positivo.</p><div id="kit-nido-onboarding"></div></div>
+ <div class="card" id="onboarding-access-checklist"><h3>Onboarding effettivo · checklist accessi e inserimenti</h3><p>Completa questi passaggi dopo l’esito positivo del Nido Test, oltre alle attività della giornata di Nido Onboarding.</p><div id="kit-onboarding-access"></div></div>
+ <details class="ta-inline-details" open><summary>Formalizzazione e avvio</summary><div class="in"><ul><li>HR conferma data di ingresso, ruolo, sede, tutor e responsabile.</li><li>Raccogli i dati del candidato con messaggio e conserva i documenti attraverso i canali aziendali autorizzati.</li><li>Per contratto o prestazione occasionale usa la procedura Contratti, Compensi e Dotazioni; non duplicare le relative condizioni in questa scheda.</li><li>Comunica in Nidonboarding l’inserimento effettivo e il tutor assegnato.</li></ul><button class="btn line" type="button" data-text-resource="email-raccolta-dati">Apri messaggio per Onboard</button></div></details>
+ <details class="ta-inline-details"><summary>Accessi, agenda e tutor</summary><div class="in"><ul><li>Verifica lo stato degli accessi e dei profili a Real Smart, N-Space One Stop, Nido Academy e Forte; registra lo stato, mai le password.</li><li>Condividi agenda, sede, referenti, obiettivi e attività con la persona e il tutor.</li><li>Il tutor usa la scheda Onboard, registra fatti osservabili e completa Check Academy e le valutazioni previste.</li><li>Per dispositivi e dotazioni, segui la procedura aziendale dedicata.</li></ul></div></details>
+ <details class="ta-inline-details"><summary>Chiusura dell’avvio</summary><div class="in"><ul><li>Conferma che documenti e accessi siano completi o segnala al referente ciò che resta da fare.</li><li>Completa la comunicazione Nido Today prevista nella checklist della giornata di Nido Onboarding, solo dopo esito positivo e verifica del consenso alla foto.</li><li>Conferma tutor, agenda e passaggio allo Step 1.</li><li>Archivia e aggiorna le informazioni nei sistemi autorizzati.</li></ul></div></details>
 </section>
-<section class="ta-materials" aria-labelledby="onboarding-materials-title"><h2 id="onboarding-materials-title">Materiali e documenti · Onboarding effettivo</h2><p class="lead">Documenti e template da usare per ingresso, tutor e percorso formativo.</p><div class="ta-material-grid"><article class="ta-material"><h3>Documenti e percorsi</h3><a class="btn line" href="/documenti/da-onboard-a-real-estate.pdf" target="_blank" rel="noopener">Da Onboard a Real Estate</a><a class="btn line" href="/documenti/nido-hr-evolution-path.pdf" target="_blank" rel="noopener">NIDO HR EVOLUTION PATH</a><a class="btn line" href="https://canva.link/mcjfmarekyu81po" target="_blank" rel="noopener">Badge agenti</a></article><article class="ta-material"><h3>Template copiabili</h3><button class="btn line" type="button" data-text-resource="email-raccolta-dati">E-mail raccolta dati</button><button class="btn line" type="button" data-text-resource="scheda-onboard-tutor">Scheda Onboard per il tutor</button><button class="btn line" type="button" data-text-resource="messaggio-standard-tutor">Messaggio standard per il tutor</button><p class="ta-material-note">Checklist raccolta dati Onboard e procedura Banca Dati HR e profili risultano ancora da fornire nell’archivio documenti.</p></article></div></section>
+<section class="ta-process area-accordion-list" aria-labelledby="corporate-onboarding-title">
+ <h2 id="corporate-onboarding-title">Onboarding Corporate</h2>
+ <p>Usa questo modello per raccogliere i dati e i documenti necessari all’inserimento di una figura corporate; personalizza i campi e la scadenza prima dell’invio.</p>
+ <button class="btn line" type="button" data-text-resource="email-raccolta-dati-corporate">Apri e-mail raccolta dati corporate</button>
+</section>
+<section class="ta-materials" aria-labelledby="onboarding-materials-title"><h2 id="onboarding-materials-title">Materiali e documenti · Onboarding effettivo</h2><p class="lead">Documenti e template da usare per ingresso, tutor e percorso formativo.</p><div class="ta-material-grid"><article class="ta-material"><h3>Documenti e percorsi</h3><a class="btn line" href="./documenti/da-onboard-a-real-estate.pdf" target="_blank" rel="noopener">Da Onboard a Real Estate</a><a class="btn line" href="./documenti/nido-hr-evolution-path.pdf" target="_blank" rel="noopener">NIDO HR EVOLUTION PATH</a><a class="btn line" href="https://canva.link/mcjfmarekyu81po" target="_blank" rel="noopener">Badge agenti</a></article><article class="ta-material"><h3>Template copiabili</h3><button class="btn line" type="button" data-text-resource="email-raccolta-dati">Messaggio raccolta dati · Onboard</button><button class="btn line" type="button" data-text-resource="messaggio-benvenuto-onboard">Benvenuto dopo Check Academy</button><button class="btn line" type="button" data-text-resource="ticket-elia-account">Dati per ticket a Elia</button><button class="btn line" type="button" data-text-resource="agenda-pippo-realsmart">Dati agenda Real Smart a Pippo</button><button class="btn line" type="button" data-text-resource="scheda-onboard-tutor">Scheda Onboard per il tutor</button><button class="btn line" type="button" data-text-resource="messaggio-standard-tutor">Messaggio standard per il tutor</button><p class="ta-material-note">Checklist raccolta dati Onboard e procedura Banca Dati HR e profili risultano ancora da fornire nell’archivio documenti.</p></article></div></section>
 </section>
 
 <section class="panel" id="pAreaTraining" data-t="Training & Development">
@@ -326,42 +455,47 @@ body.jg .tip{border-left-color:var(--lime)}
 <section class="ta-process area-accordion-list" aria-label="Training and Development">
  <details class="ta-inline-details"><summary>Ritmo settimanale della formazione</summary><div class="in"><ul><li><b>Lunedì:</b> Sales Strategy.</li><li><b>Martedì:</b> Role Play, Lead Strategy e formazione avanzata.</li><li><b>Mercoledì:</b> Sales Strategy e confronto sui temi del team.</li><li><b>Giovedì:</b> Patentino e Lead Strategy.</li><li><b>Venerdì:</b> secondo Role Play e formazione avanzata.</li></ul><p>Gli orari e gli appuntamenti speciali vanno verificati sul calendario aggiornato.</p></div></details>
  <details class="ta-inline-details"><summary>Quarter Program e Role Play</summary><div class="in"><p>Il programma ruota sui temi di acquisizione, incarico, vendita, contrattualistica, conformità, Origin, pricing, comunicazione, personal branding, time management e cultura Nido.</p><p>Organizza un Role Play collegato al tema della settimana e raccogli feedback e partecipazione.</p></div></details>
- <details class="ta-inline-details"><summary>Formazione speciale ed eventi</summary><div class="in"><p>Le sessioni con ospiti e gli eventi di team bonding richiedono conferma di data, orario, sede e partecipanti. Le date non confermate restano ipotesi e non vanno inserite come appuntamenti definitivi.</p></div></details>
+ <details class="ta-inline-details" open><summary>Formazione speciale ed eventi</summary><div class="in">
+  <p>Conferma data, orario, sede e partecipanti prima di inserire gli appuntamenti definitivi. Per le giornate con ospiti, coordina tema e organizzazione con i formatori.</p>
+  <h3>Preparazione e registrazione della formazione HR</h3><ol><li>Il giorno della formazione HR, arriva in Academy <b>un’ora prima</b> per sistemare la sala.</li><li>La sera prima, verifica che siano disponibili la <b>cabra</b> e la <b>Insta360</b> per la diretta streaming.</li><li>Coordinati con il Marketing per registrare la formazione.</li><li>Dopo la sessione, assicurati che la registrazione venga caricata su Drive e nello spazio di Nido Academy.</li><li>Inserisci giornate di formazione ed eventi nel calendario di One Stop.</li></ol>
+  <h3>Team bonding, inaugurazioni ed eventi</h3><div class="grid">
+   <div class="card"><h3>🥂 Gran Gala · N Awards</h3><p>Durante il Nido Gala si svolge N Awards, il momento in cui si celebrano i traguardi dell’anno precedente.</p><p><a class="btn line" href="https://docs.google.com/document/d/1AxqNGza5RGEc8Blou4uMlH-7OkhV_ZZm_1JFnc6npnA/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Programma dell’evento dello scorso anno</a> <a class="btn line" href="https://canva.link/f8vlaui1usysdk4" target="_blank" rel="noopener noreferrer">Presentazione N Awards</a></p></div>
+   <div class="card"><h3>🫒 Nido’s iil · raccolta olive</h3><p>Giornata di team bonding: durante la settimana si trascorre una mattinata a raccogliere le olive. Programma la data lontano dai giorni di formazione, per non bloccare troppo la produzione.</p><p>Luogo: <a href="https://maps.google.com/?q=Via+di+Igno+12,+51100+Pistoia" target="_blank" rel="noopener noreferrer">Via di Igno 12, 51100 Pistoia</a>.</p><a class="btn line" href="https://canva.link/4n1vueqcvl4dcyp" target="_blank" rel="noopener noreferrer">Progetto Nido’s iil · Canva</a></div>
+   <div class="card"><h3>🎾 Torneo Padel</h3><p>Organizza il torneo a coppie uomo-donna presso il <a href="https://www.google.com/search?q=Campus+Padel+Club" target="_blank" rel="noopener noreferrer">Campus Padel Club</a>. Per informazioni e prenotazioni: <a href="tel:+393457931554">345 793 1554</a>.</p><a class="btn line" href="./documenti/index.html#torneo-padel" target="_blank" rel="noopener">Documenti di riferimento · edizione precedente</a></div>
+   <div class="card"><h3>🏢 Inaugurazioni</h3><p>Per organizzare un’inaugurazione, crea un check con <a href="mailto:Fondatorif@nido20.com">Fondatori</a> e <a href="mailto:Zanellatim@nido20.com">Zanellati</a>.</p></div>
+   <div class="card"><h3>🎉 Marco’s Day · Nido’s Day</h3><p>Giornate dedicate al fondatore e alla squadra (Marco’s Day previsto di domenica).</p></div>
+   <div class="card"><h3>🎄 Cena di Natale</h3><p>Data e organizzazione da confermare; inserisci l’appuntamento nel calendario di One Stop.</p></div>
+  </div>
+  <p class="src">Il programma NIDEX, la raccolta preventiva delle idee e i questionari di Governance sono descritti in People &amp; Culture.</p>
+ </div></details>
  <details class="ta-inline-details"><summary>Verifica partecipazione e apprendimento</summary><div class="in"><p>Registra la partecipazione, la preparazione del Role Play, il Check Academy e i feedback. Per gli Onboard, coordina le valutazioni con tutor e HR prima di dichiarare completato il percorso.</p></div></details>
 </section>
-<section class="ta-materials" aria-labelledby="training-materials-title"><h2 id="training-materials-title">Materiali e documenti</h2><p class="lead">Dispense e risorse interne per i percorsi Academy.</p><div class="ta-material-grid"><article class="ta-material"><h3>Materiali Academy</h3><a class="btn line" href="/documenti/materiale-level-1.pdf" target="_blank" rel="noopener">Apri Level 1</a><a class="btn line" href="/documenti/materiale-level-2.pdf" target="_blank" rel="noopener">Apri Level 2</a><a class="btn line" href="/documenti/materiale-level-3.pdf" target="_blank" rel="noopener">Apri Level 3</a></article><article class="ta-material"><h3>Percorso formativo HR</h3><a class="btn line" href="/documenti/nido-hr-evolution-path.pdf" target="_blank" rel="noopener">Apri NIDO HR EVOLUTION PATH</a><p class="ta-material-note">Programma eventi e calendario aggiornato restano da confermare sui canali interni.</p></article></div></section>
+<section class="ta-materials" aria-labelledby="training-materials-title"><h2 id="training-materials-title">Materiali e documenti</h2><p class="lead">Dispense e risorse interne per i percorsi Academy.</p><div class="ta-material-grid"><article class="ta-material"><h3>Materiali Academy</h3><a class="btn line" href="./documenti/materiale-level-1.pdf" target="_blank" rel="noopener">Apri Step 1</a><a class="btn line" href="./documenti/materiale-level-2.pdf" target="_blank" rel="noopener">Apri Step 2</a><a class="btn line" href="./documenti/materiale-level-3.pdf" target="_blank" rel="noopener">Apri Step 3</a><p class="ta-material-note">Merch Nido Academy</p><a class="btn line" href="https://canva.link/029dx23s8oxhn18" target="_blank" rel="noopener noreferrer">Apri il progetto merch</a></article><article class="ta-material"><h3>Percorso formativo HR</h3><a class="btn line" href="./documenti/nido-hr-evolution-path.pdf" target="_blank" rel="noopener">Apri NIDO HR EVOLUTION PATH</a><p class="ta-material-note">Programma eventi e calendario aggiornato restano da confermare sui canali interni.</p></article></div></section>
 </section>
 
 <section class="panel" id="pAreaPerformance" data-t="Performance Management">
 <div class="area-intro"><h1>Performance Management</h1><p class="lead">Misura crescita e risultati attraverso Forte, Nido Academy, check periodici, criteri trasparenti e feedback registrati.</p><div class="area-progress-card" data-learning-area="performance"></div></div>
 <section class="ta-process area-accordion-list" aria-label="Performance Management">
  <details class="ta-inline-details"><summary>Forte · criteri e cicli di valutazione</summary><div class="in"><p>Il sistema Forte collega risultati, criteri qualitativi e crescita professionale con parametri definiti e trasparenti.</p><ul><li>Agenti e liberi professionisti: valutazione mensile e criteri collegati alla produzione.</li><li>Collaboratori subordinati: obiettivi trimestrali e valutazione nel ciclo del Quarter.</li><li>Verifica i parametri prima del Lock-in e registra i feedback nei momenti previsti.</li><li>La valutazione finale deve essere motivata e allineata ai criteri comunicati.</li></ul></div></details>
- <details class="ta-inline-details"><summary>Forte e Nido Academy · percorso Onboard</summary><div class="in"><p>Il percorso collega Nido Test, Level 1, Level 2 e Level 3. Tutor e HR seguono progressi, autonomia e valutazioni previste.</p><ul><li>Check Academy settimanale a cura del tutor.</li><li>Counter Daily Work per l’attività quotidiana dell’Onboard.</li><li>Report Tutor per confrontare periodi e lavoro in affiancamento/autonomia.</li><li>Raccogli feedback su materiali e strumenti e condividili con l’Academy.</li></ul></div></details>
+ <details class="ta-inline-details"><summary>Forte e Nido Academy · percorso Onboard</summary><div class="in"><p>Il percorso collega Nido Test, Step 1, Step 2 e Step 3. Tutor e HR seguono progressi, autonomia e valutazioni previste.</p><ul><li>Check Academy settimanale a cura del tutor.</li><li>Counter Daily Work per l’attività quotidiana dell’Onboard.</li><li>Report Tutor per confrontare periodi e lavoro in affiancamento/autonomia.</li><li>Raccogli feedback su materiali e strumenti e condividili con l’Academy.</li></ul></div></details>
  <details class="ta-inline-details"><summary>Ruoli e responsabilità</summary><div class="in"><p>HR presidia processo e qualità dei dati; Amministrazione valida i dati economici; i responsabili consolidano le valutazioni e registrano feedback nei tempi previsti.</p></div></details>
 </section>
 <section class="ta-materials" aria-labelledby="performance-materials-title"><h2 id="performance-materials-title">Materiali e documenti</h2><p class="lead">Gli strumenti Forte e Nido Academy sono gestiti nei sistemi interni; non risultano PDF dedicati in archivio.</p><div class="ta-material-grid"><article class="ta-material"><h3>One Stop</h3><p>Accesso ai sistemi e agli strumenti aziendali collegati alla crescita e alla performance.</p><a class="btn lime" href="https://nspace-one-stop-dashboard.bolt.host/commission" target="_blank" rel="noopener">Apri One Stop</a></article><article class="ta-material"><h3>Procedure nella guida</h3><p>Le regole Forte e il percorso Nido Academy sono descritti nelle procedure interne Performance Management.</p></article></div></section>
 </section>
 
 <section class="panel" id="pAreaPeople" data-t="People & Culture">
-<div class="area-intro"><h1>People &amp; Culture</h1><p class="lead">Presidia cultura, comportamenti, clima, conflitti, benessere e uscita delle persone dall’organizzazione.</p><div class="area-progress-card" data-learning-area="people"></div></div>
+<div class="area-intro"><h1>People &amp; Culture</h1><p class="lead">Presidia cultura, governance, clima, coordinamento operativo, conflitti, benessere e uscita delle persone dall’organizzazione.</p><div class="area-progress-card" data-learning-area="people"></div></div>
 <section class="ta-process area-accordion-list" aria-label="People and Culture">
  <details class="ta-inline-details"><summary>Valori e cultura</summary><div class="in"><ul><li>Parti da fatti osservabili e segnala i problemi senza attacchi personali.</li><li>Prendi in carico il feedback fino alla risoluzione e chiarisci ruoli e responsabilità.</li><li>Collega i comportamenti ai criteri di crescita e alle pratiche operative.</li></ul></div></details>
  <details class="ta-inline-details"><summary>Gestione dei conflitti</summary><div class="in"><ol><li>Ascolta le parti separatamente e registra fatti e date.</li><li>Quando è appropriato, facilita un confronto e un accordo verificabile.</li><li>Per casi gravi o non risolti attiva la gestione formale prevista e coinvolgi i referenti competenti.</li></ol></div></details>
  <details class="ta-inline-details"><summary>Nido Exit e passaggio di consegne</summary><div class="in"><p>Coordina transizione, trasferimento delle attività, sospensione accessi, restituzione dei materiali e raccolta del feedback di uscita. Per accessi e sicurezza segui le procedure aziendali e coinvolgi gli amministratori autorizzati.</p></div></details>
  <details class="ta-inline-details"><summary>Compleanni e comunicazioni interne</summary><div class="in"><p>Verifica data e nome, personalizza il messaggio, programma la pubblicazione su Nido Today e ricontrolla la programmazione. La guida salva il promemoria; la pubblicazione resta manuale.</p></div></details>
+ <details class="ta-inline-details"><summary>Governance e NIDEX · ciclo trimestrale</summary><div class="in"><div class="flow"><div><b>Governance</b>Definisce i miglioramenti e le modifiche organizzative, inclusi cambi di ruolo e sostituzioni dei team leader. È presieduta da un facilitatore.</div><div><b>NIDEX</b>Traduce le decisioni della Governance in progetti concreti e procedure operative, con responsabili e scadenze.</div><div><b>Pomeriggi di progetto</b>Servono a sviluppare e implementare i progetti di miglioramento continuo.</div></div><h3>Preparazione della giornata NIDEX</h3><ol><li>Una settimana prima, avvisa tutti di inserire le proprie proposte nello Spazio Idee di N-Space One Stop.</li><li>Il giorno della NIDEX, raccogliete e presentate le idee e lavorate alla definizione dei progetti.</li><li>Nella stessa giornata, fai ricompilare il questionario di The Job Game e quello sul clima aziendale.</li></ol><a class="btn line" href="https://docs.google.com/forms/d/e/1FAIpQLSc5Bqj9N3sSOU9P5uefMTV-WYHkoNzB5hMXFJ5dBJ38psZlOA/viewform?usp=sharing&amp;ouid=103339817217738754782" target="_blank" rel="noopener noreferrer">Apri il questionario The Job Game</a></div></details>
+ <details class="ta-inline-details"><summary>Monitoraggio del clima aziendale</summary><div class="in"><p>Il questionario anonimo rileva percezioni su soddisfazione, ambiente di lavoro, affiancamento, chiarezza dei ruoli ed eventuali criticità. Viene ricompilato durante la giornata NIDEX; raccogli e condividi i risultati rispettando l’anonimato.</p><p>Il questionario The Job Game viene risomministrato periodicamente alle figure interne. Usa i risultati per orientare conversazioni e percorsi di sviluppo, non come giudizio isolato.</p><button class="btn line" data-go="pj1">Vai all’area The Job Game</button></div></details>
+ <details class="ta-inline-details"><summary>Agenda condivisa · controllo quotidiano</summary><div class="in"><p>L’agenda rende visibili le attività e sincronizza i reparti. Ogni Coordinator controlla l’agenda dei collaboratori del proprio ufficio dalle <b>09:00 alle 09:30</b>.</p><ol><li>Verifica la presenza in ufficio, gli appuntamenti con i clienti e i blocchi dedicati a ricerca o attività amministrative.</li><li>Controlla che diciture come “Permesso” e “No Agenzia” siano registrate correttamente.</li><li>La presenza in ufficio alle 09:00 non è richiesta se la persona non ha un’attività programmata.</li><li>Se la persona non è in sede e l’agenda non riporta indicazioni o blocchi operativi, il Coordinator avvisa l’HR Business Partner di riferimento entro le <b>09:40</b>.</li><li>Alla terza segnalazione consecutiva per la stessa persona, il caso passa al Responsabile d’Ufficio per un colloquio di allineamento.</li></ol><div class="tip"><strong>Ruolo dell’HR</strong>Riceve e traccia le segnalazioni inviate entro le 09:40. Alla terza segnalazione consecutiva, facilita il passaggio al Responsabile d’Ufficio.</div></div></details>
+ <details class="ta-inline-details"><summary>Documenti, dipendenze e checklist operative</summary><div class="in"><ul><li>Usa l’inventario per distinguere documenti disponibili e materiali ancora da fornire.</li><li>Consulta le dipendenze esterne e i referenti dei sistemi indicati nella guida.</li><li>Le checklist create dai template sono disponibili nell’area Checklist; i flussi personalizzati sono salvati nel browser di questo dispositivo.</li></ul></div></details>
 </section>
-<section class="ta-materials" aria-labelledby="people-materials-title"><h2 id="people-materials-title">Materiali e documenti</h2><p class="lead">Moduli e checklist interni per clima e uscita.</p><div class="ta-material-grid"><article class="ta-material"><h3>Clima aziendale</h3><a class="btn line" href="/documenti/questionario-clima.pdf" target="_blank" rel="noopener">Apri questionario clima</a></article><article class="ta-material"><h3>Nido Exit</h3><a class="btn line" href="/documenti/checklist-uscita.html" target="_blank" rel="noopener">Apri checklist uscita</a><a class="btn line" href="/documenti/modulo-nido-exit.html" target="_blank" rel="noopener">Apri modulo Nido Exit</a></article></div></section>
-</section>
-
-<section class="panel" id="pAreaOps" data-t="HR Operations">
-<div class="area-intro"><h1>HR Operations</h1><p class="lead">Coordina governance, clima, procedure trasversali, documentazione, checklist e dipendenze operative dei sistemi HR.</p><div class="area-progress-card" data-learning-area="operations"></div></div>
-<section class="ta-process area-accordion-list" aria-label="HR Operations">
- <details class="ta-inline-details"><summary>Governance e Nidex</summary><div class="in"><p>La governance definisce decisioni di miglioramento, cambi di ruolo e responsabilità. Nidex traduce le decisioni in progetti e procedure operative; assegna owner e verifica le scadenze.</p></div></details>
- <details class="ta-inline-details"><summary>Clima e agende</summary><div class="in"><p>Il monitoraggio del clima raccoglie feedback anonimi su ambiente, affiancamento e chiarezza dei ruoli. Il Coordinator verifica quotidianamente che l’agenda contenga presenze, appuntamenti e blocchi di lavoro; le anomalie seguono la procedura di segnalazione.</p></div></details>
- <details class="ta-inline-details"><summary>Documenti e dipendenze operative</summary><div class="in"><p>Usa l’inventario documenti per verificare quali file sono disponibili e quali devono ancora essere forniti. Le dipendenze esterne e i referenti dei sistemi sono registrati nella guida.</p></div></details>
- <details class="ta-inline-details"><summary>Checklist formative e template</summary><div class="in"><p>Le checklist create dai template compaiono nell’area Checklist. I flussi personalizzati si modificano e si salvano nel browser di questo dispositivo.</p></div></details>
-</section>
-<section class="ta-materials" aria-labelledby="ops-materials-title"><h2 id="ops-materials-title">Materiali e documenti</h2><p class="lead">Documenti di controllo, istruzioni e riepiloghi generali disponibili nel progetto.</p><div class="ta-material-grid"><article class="ta-material"><h3>Documentazione HR</h3><a class="btn line" href="/documenti/istruzioni-guida-hr.pdf" target="_blank" rel="noopener">Istruzioni Guida HR</a><a class="btn line" href="/documenti/checklist-controllo-processo-hr.pdf" target="_blank" rel="noopener">Checklist controllo</a><a class="btn line" href="/documenti/modelli-operativi-hr.pdf" target="_blank" rel="noopener">Modelli operativi</a><a class="btn line" href="/documenti/riepilogo-processo-hr.pdf" target="_blank" rel="noopener">Riepilogo processo</a></article><article class="ta-material"><h3>Inventario e modelli</h3><p>Template e documenti di tutte le aree sono elencati nell’Archivio documenti della guida.</p></article></div></section>
+<section class="ta-materials" aria-labelledby="people-materials-title"><h2 id="people-materials-title">Materiali e documenti</h2><p class="lead">Questionari, procedure e moduli per i processi di People &amp; Culture.</p><div class="ta-material-grid"><article class="ta-material"><h3>Nido Exit</h3><a class="btn line" href="./documenti/checklist-uscita.html" target="_blank" rel="noopener">Apri checklist uscita</a><a class="btn line" href="./documenti/modulo-nido-exit.html" target="_blank" rel="noopener">Apri modulo Nido Exit</a></article><article class="ta-material"><h3>Clima e Governance</h3><a class="btn line" href="./documenti/questionario-clima.pdf" target="_blank" rel="noopener">Apri questionario clima</a><a class="btn line" href="https://docs.google.com/forms/d/e/1FAIpQLSc5Bqj9N3sSOU9P5uefMTV-WYHkoNzB5hMXFJ5dBJ38psZlOA/viewform?usp=sharing&amp;ouid=103339817217738754782" target="_blank" rel="noopener noreferrer">Apri questionario The Job Game</a><a class="btn line" href="https://nspace-one-stop-dashboard.bolt.host/commission" target="_blank" rel="noopener">Apri One Stop</a></article><article class="ta-material"><h3>Documentazione HR</h3><a class="btn line" href="./documenti/istruzioni-guida-hr.pdf" target="_blank" rel="noopener">Istruzioni Guida HR</a><a class="btn line" href="./documenti/checklist-controllo-processo-hr.pdf" target="_blank" rel="noopener">Checklist controllo</a><a class="btn line" href="./documenti/modelli-operativi-hr.pdf" target="_blank" rel="noopener">Modelli operativi</a><a class="btn line" href="./documenti/riepilogo-processo-hr.pdf" target="_blank" rel="noopener">Riepilogo processo</a></article><article class="ta-material"><h3>Inventario e modelli</h3><p>Template e documenti di tutte le aree sono elencati nell’Archivio documenti della guida.</p></article></div></section>
 </section>
 
 <section class="panel" id="pAreaJG" data-t="The Job Game">
@@ -369,11 +503,11 @@ body.jg .tip{border-left-color:var(--lime)}
 <section class="ta-process area-accordion-list" aria-label="The Job Game">
  <details class="ta-inline-details"><summary>Il test e la lettura del report</summary><div class="in"><p>Il candidato affronta situazioni interattive; il test richiede circa 15 minuti. Leggi il report prima del colloquio e usalo per preparare domande di approfondimento. Il report descrive tendenze, non costituisce da solo un verdetto.</p></div></details>
  <details class="ta-inline-details"><summary>Psicotrappole · tutte le definizioni</summary><div class="in"><p>Apri una voce per leggere la definizione e consultare il relativo esempio.</p><div id="trpArea" class="jobgame-definitions"></div></div></details>
- <details class="ta-inline-details"><summary>Psicosoluzioni · tutti gli esercizi</summary><div class="in"><p>Apri una voce per consultare gli esercizi disponibili per ciascuna psicotrappola.</p><div id="solArea" class="jobgame-definitions"></div></div></details>
+ <details class="ta-inline-details"><summary>Psicosoluzioni · tutti gli esercizi</summary><div class="in"><p>Apri una voce per consultare gli esercizi disponibili per ciascuna psicotrappola.</p><div id="solArea" class="jobgame-definitions"></div><h3>PDF di approfondimento</h3><div class="ta-material-grid"><article class="ta-material"><h4>Psicosoluzioni e materiali ricevuti</h4><a class="btn line" href="./documenti/the-job-game/autosabotaggio.pdf" target="_blank" rel="noopener">Autosabotaggio</a><a class="btn line" href="./documenti/the-job-game/conoscenza-definitiva.pdf" target="_blank" rel="noopener">Conoscenza definitiva</a><a class="btn line" href="./documenti/the-job-game/difendersi-preventivamente.pdf" target="_blank" rel="noopener">Difendersi preventivamente</a><a class="btn line" href="./documenti/the-job-game/aiuto-che-danneggia.pdf" target="_blank" rel="noopener">Aiuto che danneggia · esercizi</a><a class="btn line" href="./documenti/the-job-game/rimandare.pdf" target="_blank" rel="noopener">Rimandare · psicosoluzioni</a><a class="btn line" href="./documenti/the-job-game/silenzio-assoluto.pdf" target="_blank" rel="noopener">Silenzio assoluto · psicosoluzioni</a></article></div></div></details>
  <details class="ta-inline-details"><summary>Uso del risultato nella selezione</summary><div class="in"><ul><li>Integra il report con CV, job analysis e colloquio.</li><li>Registra la valutazione nella griglia Nido Bias Free.</li><li>Usa gli esiti per dare un feedback rispettoso e pertinente al ruolo.</li></ul></div></details>
  <details class="ta-inline-details"><summary>Classi live con Lisa</summary><div class="in"><p>Ogni giovedì alle 11:00 si svolge la classe live con Lisa.</p><a class="btn line" href="https://drive.google.com/drive/folders/1EeafTsjEJrBBZ9Qc-RRxHodkRS6VJS_H?usp=sharing" target="_blank" rel="noopener">Apri registrazioni delle classi live</a></div></details>
 </section>
-<section class="ta-materials" aria-labelledby="jobgame-materials-title"><h2 id="jobgame-materials-title">Materiali e documenti</h2><p class="lead">Piattaforma, video e registrazioni delle classi.</p><div class="ta-material-grid"><article class="ta-material"><h3>Piattaforma e video</h3><a class="btn lime" href="https://nido20.thejobgame.it" target="_blank" rel="noopener">Apri The Job Game</a><a class="btn line" href="/documenti/nidos-game.mp4" target="_blank" rel="noopener">Apri Nido’s Game</a></article><article class="ta-material"><h3>Classi live</h3><p>Giovedì alle 11:00 con Lisa.</p><a class="btn line" href="https://drive.google.com/drive/folders/1EeafTsjEJrBBZ9Qc-RRxHodkRS6VJS_H?usp=sharing" target="_blank" rel="noopener">Apri cartella registrazioni</a></article></div></section>
+<section class="ta-materials" aria-labelledby="jobgame-materials-title"><h2 id="jobgame-materials-title">Materiali e documenti</h2><p class="lead">Piattaforma, video e registrazioni delle classi.</p><div class="ta-material-grid"><article class="ta-material"><h3>Piattaforma e video</h3><a class="btn lime" href="https://nido20.thejobgame.it" target="_blank" rel="noopener">Apri The Job Game</a><a class="btn line" href="./documenti/nidos-game.mp4" target="_blank" rel="noopener">Apri Nido’s Game</a></article><article class="ta-material"><h3>Classi live</h3><p>Giovedì alle 11:00 con Lisa.</p><a class="btn line" href="https://drive.google.com/drive/folders/1EeafTsjEJrBBZ9Qc-RRxHodkRS6VJS_H?usp=sharing" target="_blank" rel="noopener">Apri cartella registrazioni</a></article></div></section>
 </section>
 
 <!-- ============ FASE 1 ============ -->
@@ -564,10 +698,10 @@ Entro sei giorni ti contatteremo per comunicarti l’esito del colloquio, sia ch
 <li><b>Lascia spazio alle domande del candidato</b> e chiudi spiegando i prossimi passi e i tempi (per noi: 6 giorni).</li>
 <li><b>Punteggia subito e scrivi il perché:</b> evita di decidere sull’impressione del momento.</li></ul>
 <div class="src">Fonti consultate: Indeed, Michael Page, Criteria, OPM, Training Industry, JobScore.</div></div>
-<h2 id="sbs">Domande e criteri da consultare</h2>
-<p class="lead" style="margin-bottom:10px">Le domande sono raccolte come riferimento. Seleziona quelle pertinenti al ruolo e al colloquio; non è una checklist da completare né una sequenza guidata.</p>
+<h2 id="sbs">Conduci il colloquio · domande e criteri</h2>
+<p class="lead" style="margin-bottom:10px">Usa le domande pertinenti al ruolo per condurre il colloquio; non sono una checklist da completare né una sequenza rigida.</p>
 <div class="card"><h3>Primo colloquio HR · domande</h3><div class="tip"><strong>Obiettivo</strong>Far emergere esperienze, motivazioni, aspettative e consapevolezza del candidato. Approfondisci con esempi concreti e registra fatti osservabili.</div><div class="ta-question-carousel" id="l1s" role="group" aria-label="Domande del primo colloquio"><div class="ta-question-meta"><span data-question-number aria-live="polite"></span><b data-question-category></b></div><p class="ta-question-text" data-question-text></p><p class="ta-question-note" data-question-note></p><div class="ta-question-controls"><button type="button" data-question-prev aria-label="Domanda precedente" title="Domanda precedente">←</button><button type="button" data-question-next aria-label="Domanda successiva" title="Domanda successiva">→</button></div></div></div>
-<div class="card ta-profile-specific" data-ta-profile-content="commercial"><h3>Secondo colloquio con Marco · domande standard</h3><p>Domande per approfondire il profilo commerciale e la compatibilità con il progetto. Adatta il colloquio alla job analysis.</p><div class="ta-question-carousel" id="l2s" role="group" aria-label="Domande standard del secondo colloquio commerciale"><div class="ta-question-meta"><span data-question-number aria-live="polite"></span><b data-question-category></b></div><p class="ta-question-text" data-question-text></p><p class="ta-question-note" data-question-note></p><div class="ta-question-controls"><button type="button" data-question-prev aria-label="Domanda precedente" title="Domanda precedente">←</button><button type="button" data-question-next aria-label="Domanda successiva" title="Domanda successiva">→</button></div></div><p><a class="btn line" href="https://docs.google.com/spreadsheets/d/1R9jkeS84Zlw0VDKFg5lVU_Gu9sulUU8YEaIIYiGmPJM/edit?gid=878492186#gid=878492186" target="_blank" rel="noopener">Apri foglio Raffica</a></p></div>
+<div class="card ta-profile-specific" data-ta-profile-content="commercial"><h3>Domande standard per il secondo colloquio commerciale</h3><p>Domande per approfondire il profilo commerciale e la compatibilità con il progetto. Adatta il colloquio alla job analysis.</p><div class="ta-question-carousel" id="l2s" role="group" aria-label="Domande standard del secondo colloquio commerciale"><div class="ta-question-meta"><span data-question-number aria-live="polite"></span><b data-question-category></b></div><p class="ta-question-text" data-question-text></p><p class="ta-question-note" data-question-note></p><div class="ta-question-controls"><button type="button" data-question-prev aria-label="Domanda precedente" title="Domanda precedente">←</button><button type="button" data-question-next aria-label="Domanda successiva" title="Domanda successiva">→</button></div></div><p><a class="btn line" href="https://docs.google.com/spreadsheets/d/1R9jkeS84Zlw0VDKFg5lVU_Gu9sulUU8YEaIIYiGmPJM/edit?gid=878492186#gid=878492186" target="_blank" rel="noopener">Apri foglio Raffica</a></p></div>
 <div class="card ta-profile-specific" data-ta-profile-content="commercial"><h3>Domande di approfondimento sulle psicotrappole</h3><p>Usa le domande pertinenti al ruolo; non insistere per ottenere una risposta e registra evidenze concrete.</p><div class="ta-question-carousel" id="l2traps" role="group" aria-label="Domande sulle psicotrappole commerciali"><div class="ta-question-meta"><span data-question-number aria-live="polite"></span><b data-question-category></b></div><p class="ta-question-text" data-question-text></p><p class="ta-question-note" data-question-note></p><div class="ta-question-controls"><button type="button" data-question-prev aria-label="Domanda precedente" title="Domanda precedente">←</button><button type="button" data-question-next aria-label="Domanda successiva" title="Domanda successiva">→</button></div></div></div>
 <details class="ta-profile-specific" data-ta-profile-content="commercial"><summary>Apertura del secondo colloquio</summary><div class="in"><div class="script" id="sL2opening">Ciao [Nome], complimenti: sei stato/a selezionato/a per proseguire. Il tuo profilo ci ha colpito e oggi possiamo conoscerci meglio.
 
@@ -681,70 +815,59 @@ Team HR de Il Nido Immobiliare</div><button class="btn" data-copy="e2">Copia tem
 <p class="lead">Procedura dettagliata dalla decisione di avviare il Nido Test all’esito della settimana di prova.</p>
 <div class="tip"><strong>Nel tempo libero</strong>Se non ci sono attività programmate, l’Onboard può consultare i tutorial disponibili sulla piattaforma Academy.</div>
 <div class="card"><h3>Documenti e strumenti di riferimento</h3>
-<button class="btn lime" data-link="procedura">Procedura Nido Test</button> <button class="btn lime" data-link="onboard_step">Da Onboard a Real Estate</button> <button class="btn line" data-link="documenti_onboarding">Documenti locali</button> <button class="btn line" data-link="nidos_game">Nido’s Game</button> <button class="btn line" data-link="foto_badge">Badge agenti · Canva</button> <button class="btn line" data-print>Stampa / salva PDF</button>
+<button class="btn lime" data-link="procedura">Procedura Nido Test</button> <button class="btn lime" data-link="onboard_step">Da Onboard a Real Estate</button> <button class="btn line" data-link="documenti_onboarding">Documenti locali</button> <button class="btn line" data-link="nidos_game">Nido’s Game</button> <button class="btn line" data-link="foto_badge">Badge agenti · Canva</button> <a class="btn line" href="https://canva.link/oamzl9dizn953bs" target="_blank" rel="noopener noreferrer">Presentazione onboarding The Job Game</a> <button class="btn line" data-print>Stampa / salva PDF</button>
 <p class="src">Non inserire password nei documenti condivisi. Tratta dati personali, foto e documenti soltanto nei canali aziendali autorizzati.</p></div>
 
 <h2>1 · Preparazione anticipata</h2>
 <div class="ta-process area-accordion-list">
  <details class="ta-inline-details" open><summary>HR Business Partner · coordinamento e dati</summary><div class="in">
   <label class="chk"><input type="checkbox"> Verifica l’esito positivo del percorso di selezione e la decisione di procedere con il Nido Test.</label>
-  <label class="chk"><input type="checkbox"> Conferma ruolo, sede, data di avvio, tutor e responsabile Onboard.</label>
+  <label class="chk"><input type="checkbox"> Conferma ruolo, sede, data di avvio e tutor.</label>
   <label class="chk"><input type="checkbox"> Organizza l’agenda usando Agenda Academy e gli appuntamenti degli agenti.</label>
   <label class="chk"><input type="checkbox"> Comunica in Nidonboarding l’inserimento e il tutor assegnato.</label>
-  <label class="chk"><input type="checkbox"> Invia l’e-mail di raccolta dati e verifica il caricamento nel canale aziendale indicato.</label>
+  <div class="chk-action-row"><label class="chk"><input type="checkbox"> Raccogli i dati del candidato con messaggio.</label><button class="btn line" type="button" data-text-resource="email-raccolta-dati">Messaggio Onboard</button></div>
   <label class="chk"><input type="checkbox"> Per raccolta dati e Banca Dati HR usa la procedura generale e la cartella Documenti.</label>
  </div></details>
  <details class="ta-inline-details"><summary>Documenti, contratto e dotazioni</summary><div class="in">
   <label class="chk"><input type="checkbox"> Per la prestazione occasionale, segui la procedura Contratti, Compensi e Dotazioni.</label>
-  <label class="chk"><input type="checkbox"> Per foto e badge usa la cartella dedicata e verifica il consenso prima dell’uso.</label>
+  <label class="chk"><input type="checkbox"> Tieni disponibile la cartella foto/badge e verifica il consenso prima dell’uso; foto professionale e badge si realizzano nella giornata di Nido Onboarding.</label>
   <label class="chk"><input type="checkbox"> Verifica che i documenti richiesti siano completi; se manca la checklist ufficiale di raccolta dati, segnala la lacuna all’HR responsabile invece di sostituirla con un elenco non approvato.</label>
  </div></details>
  <details class="ta-inline-details"><summary>Accessi e sistemi · HR e referenti tecnici</summary><div class="in">
-  <label class="chk"><input type="checkbox"> Richiedi a Filippo l’account Real Smart.</label>
-  <label class="chk"><input type="checkbox"> Apri a Elia il ticket per Google Drive e N-Space.</label>
-  <label class="chk"><input type="checkbox"> Verifica che Forte e Origin siano predisposti.</label>
+  <div class="chk-action-row"><label class="chk"><input type="checkbox"> Per la creazione del profilo Google, coordinati con Elia e verifica che sia pronto prima dell’avvio.</label><button class="btn line" type="button" data-text-resource="ticket-elia-account">Dati ticket a Elia</button></div>
+  <div class="chk-action-row"><label class="chk"><input type="checkbox"> Per Real Smart, coordinati con Filippo Fondatori: il profilo deve avere già inserite le attività della settimana.</label><button class="btn line" type="button" data-text-resource="agenda-pippo-realsmart">Dati agenda a Pippo</button></div>
+  <label class="chk"><input type="checkbox"> Il giorno del Nido Test, crea con l’Onboard i profili N-Space One Stop, Origin, Forte e N-Space HR e chiedi a Elia di accettarli; crea il profilo Onboard su Nido Academy e Forte e assegna i video tutorial.</label>
+  <label class="chk"><input type="checkbox"> Predisponi l’agenda della prima settimana su Real Smart con le attività previste.</label>
   <label class="chk"><input type="checkbox"> Se è previsto un dispositivo, segui la procedura aziendale e registra lo stato di consegna/configurazione.</label>
   <label class="chk"><input type="checkbox"> Registra solo lo stato degli accessi; non condividere password nella scheda o nei messaggi.</label>
  </div></details>
  <details class="ta-inline-details"><summary>Tutor · agenda e preparazione</summary><div class="in">
   <label class="chk"><input type="checkbox"> Ricevi la scheda Onboard e il messaggio standard; verifica ruolo, sede, date e referenti.</label>
   <label class="chk"><input type="checkbox"> Controlla l’agenda della settimana e gli appuntamenti di affiancamento.</label>
-  <label class="chk"><input type="checkbox"> Prepara il Nido Pack e i materiali per il primo giorno.</label>
-  <label class="chk"><input type="checkbox"> Prima del lunedì conferma con l’Onboard orario, abbigliamento e documenti richiesti.</label>
-  <label class="chk"><input type="checkbox"> Invia il messaggio di benvenuto e Nido’s Game solo se il colloquio finale è stato svolto entro metà settimana.</label>
+  <label class="chk"><input type="checkbox"> Prepara il Nido Pack e i materiali per la giornata di Nido Onboarding, non per il primo giorno di Nido Test.</label>
+  <label class="chk"><input type="checkbox"> Prima dell’avvio del Nido Test conferma con l’Onboard orario, abbigliamento e documenti richiesti.</label>
+  <div class="chk-action-row"><label class="chk"><input type="checkbox"> Dopo la Check Academy, se si procede con l’onboarding, invia il messaggio di benvenuto e condividi Nido’s Game.</label><button class="btn line" type="button" data-text-resource="messaggio-benvenuto-onboard">Messaggio di benvenuto</button></div>
  </div></details>
 </div>
 
-<h2>2 · Primo giorno</h2>
-<div class="card"><p>Registra ogni attività di accoglienza e verifica; la foto serve a predisporre la comunicazione, che si pubblica solo dopo esito positivo.</p><div id="kit"></div></div>
+<h2>2 · Primo giorno di Nido Test · martedì</h2>
+<div class="card"><p>Registra soltanto le attività di avvio della settimana di prova. Le attività di ingresso effettivo sono nella checklist della distinta giornata di Nido Onboarding.</p><div id="kit-nido-test"></div></div>
 
 <h2>3 · Settimana Nido Test</h2>
 <div class="ta-process area-accordion-list">
- <details class="ta-inline-details"><summary>Lunedì · avvio in zona</summary><div class="in"><label class="chk"><input type="checkbox"> Tutor/responsabile Onboard accompagna l’Onboard nella zona assegnata: Pt1 Xina, Pt2 Macaluso, Montecatini Signorini, Quarrata Biagini, Agliana Gai, Firenze Biagiotti.</label><label class="chk"><input type="checkbox"> HR verifica la checklist del primo giorno e registra eventuali attività mancanti.</label><label class="chk"><input type="checkbox"> Per la firma della prestazione occasionale, usa Contratti, Compensi e Dotazioni.</label></div></details>
- <details class="ta-inline-details"><summary>Martedì · Academy e affiancamento</summary><div class="in"><label class="chk"><input type="checkbox"> Svolgi Academy al mattino: Lead Strategy e Nido Bussola.</label><label class="chk"><input type="checkbox"> Svolgi role play e affiancamento nel pomeriggio.</label><label class="chk"><input type="checkbox"> Tutor svolge il check serale delle 18:00 e annota fatti osservabili.</label></div></details>
- <details class="ta-inline-details"><summary>Mercoledì · zona e confronto</summary><div class="in"><label class="chk"><input type="checkbox"> Svolgi attività in zona con Academy.</label><label class="chk"><input type="checkbox"> Partecipa al caffè con Martina Bragagia alle 17:00.</label></div></details>
- <details class="ta-inline-details"><summary>Giovedì · Academy, telemarketing e affiancamento</summary><div class="in"><label class="chk"><input type="checkbox"> Partecipa ad Academy e svolgi telemarketing.</label><label class="chk"><input type="checkbox"> Svolgi role play e affiancamento, incluse visite e servizi foto previsti.</label><label class="chk"><input type="checkbox"> Tutor svolge il check delle 18:00 e annota progressi o aspetti da riprendere.</label></div></details>
- <details class="ta-inline-details"><summary>Venerdì · valutazione finale alle 16:00</summary><div class="in"><label class="chk"><input type="checkbox"> Tutor completa la checklist su Forte e motiva l’esito.</label><label class="chk"><input type="checkbox"> HR verifica che le valutazioni Nido Academy e Forte Academy siano registrate e complete.</label><label class="chk"><input type="checkbox"> HR confronta i riscontri con i criteri previsti e registra gli elementi mancanti prima di comunicare l’esito.</label><p class="src">Non sono documentati criteri numerici di promozione aggiuntivi: non introdurne di nuovi.</p></div></details>
+ <details class="ta-inline-details"><summary>Martedì · accoglienza, zona e attività con agenti</summary><div class="in"><label class="chk"><input type="checkbox"> 09:00–10:00 · Accoglienza, firma della prestazione e accessi ai profili.</label><label class="chk"><input type="checkbox"> 10:00–12:00 · Attività in zona.</label><label class="chk"><input type="checkbox"> 12:00–13:00 · Lead Strategy.</label><label class="chk"><input type="checkbox"> 14:00–15:00 · Tutorial.</label><label class="chk"><input type="checkbox"> 15:00–18:00 · Attività con agenti.</label><label class="chk"><input type="checkbox"> 18:00 · Check con il tutor; annota fatti osservabili.</label></div></details>
+ <details class="ta-inline-details"><summary>Mercoledì · zona, tavola rotonda e role play</summary><div class="in"><label class="chk"><input type="checkbox"> 09:00–12:00 · Attività in zona.</label><label class="chk"><input type="checkbox"> 12:00–13:00 · Tavola rotonda.</label><label class="chk"><input type="checkbox"> 14:00–15:00 · Tutorial.</label><label class="chk"><input type="checkbox"> 15:00–16:00 · Role play.</label><label class="chk"><input type="checkbox"> 16:00–18:00 · Attività con agenti.</label><label class="chk"><input type="checkbox"> 18:00 · Check con il tutor; annota fatti osservabili.</label></div></details>
+ <details class="ta-inline-details"><summary>Giovedì · formazione telemarketing e attività con agenti</summary><div class="in"><label class="chk"><input type="checkbox"> 09:00–12:00 · Formazione telemarketing.</label><label class="chk"><input type="checkbox"> 12:00–13:00 · Tavola rotonda.</label><label class="chk"><input type="checkbox"> 14:00–15:00 · Tutorial.</label><label class="chk"><input type="checkbox"> 15:00–18:00 · Attività con agenti.</label><label class="chk"><input type="checkbox"> 18:00 · Check con il tutor; annota progressi o aspetti da riprendere.</label></div></details>
+ <details class="ta-inline-details"><summary>Venerdì · zona, Academy e valutazione</summary><div class="in"><label class="chk"><input type="checkbox"> 09:00–12:00 · Attività in zona.</label><label class="chk"><input type="checkbox"> 12:00–13:00 · Lead Strategy.</label><label class="chk"><input type="checkbox"> 14:00–15:00 · Tutorial.</label><label class="chk"><input type="checkbox"> 15:00–16:00 · Role play.</label><label class="chk"><input type="checkbox"> 16:00–17:00 · Check con Academy nell’orario prestabilito.</label><label class="chk"><input type="checkbox"> 17:00–18:00 · Attività con agenti.</label><label class="chk"><input type="checkbox"> 18:00 · Check con il tutor.</label><label class="chk"><input type="checkbox"> Tutor completa la checklist su Forte e motiva l’esito.</label><label class="chk"><input type="checkbox"> HR verifica che le valutazioni Nido Academy e Forte Academy siano registrate e complete.</label><label class="chk"><input type="checkbox"> HR confronta i riscontri con i criteri previsti e registra gli elementi mancanti prima di comunicare l’esito.</label><p class="src">Non sono documentati criteri numerici di promozione aggiuntivi: non introdurne di nuovi.</p></div></details>
 </div>
 <h2>4 · Esito e comunicazione</h2>
 <div class="ta-process area-accordion-list">
- <details class="ta-inline-details"><summary>Esito positivo · checklist di chiusura</summary><div class="in"><label class="chk"><input type="checkbox"> Tutor conferma l’ingresso nella checklist su Forte.</label><label class="chk"><input type="checkbox"> HR verifica che le valutazioni Nido Academy e Forte Academy siano complete e motivate.</label><label class="chk"><input type="checkbox"> HR pubblica su Nido Today la comunicazione con la foto del primo giorno, dopo aver verificato il consenso.</label><label class="chk"><input type="checkbox"> HR conferma onboarding a Firenze, tutor e passaggio al Level 1.</label></div></details>
+ <details class="ta-inline-details"><summary>Esito positivo · checklist di chiusura Nido Test</summary><div class="in"><label class="chk"><input type="checkbox"> Tutor conferma l’ingresso nella checklist su Forte.</label><label class="chk"><input type="checkbox"> HR verifica che le valutazioni Nido Academy e Forte Academy siano complete e motivate.</label><label class="chk"><input type="checkbox"> HR conferma il passaggio al Nido Onboarding e ne programma la giornata con i referenti.</label><label class="chk"><input type="checkbox"> HR conferma tutor e passaggio allo Step 1.</label></div></details>
  <details class="ta-inline-details"><summary>Esito non positivo o valutazione incompleta</summary><div class="in"><label class="chk"><input type="checkbox"> Non pubblicare la comunicazione su Nido Today.</label><label class="chk"><input type="checkbox"> Registra esito e motivazione nei sistemi previsti.</label><label class="chk"><input type="checkbox"> Completa le valutazioni mancanti prima di chiudere il percorso.</label><label class="chk"><input type="checkbox"> Informa Onboard e tutor seguendo la procedura di feedback in uso.</label></div></details>
 </div>
 
 <h2>Template operativi</h2>
-<details><summary>E-mail per raccolta dati e documenti</summary><div class="in"><div class="script" id="eonboard">Oggetto: Dati e documenti per l’avvio del Nido Test
-
-Ciao [Nome],
-per preparare il tuo avvio nel percorso Nido Test, ti chiediamo di completare la raccolta dei dati e dei documenti indicati nella procedura aggiornata.
-
-Trovi la checklist e la cartella di riferimento qui: [Link Documenti].
-Utilizza esclusivamente il canale indicato dall’HR e non inviare password o credenziali.
-
-Quando hai completato il caricamento, rispondi a questa e-mail per conferma. Se un documento non è disponibile, segnalalo senza inviare dati alternativi non richiesti.
-
-Grazie,
-Team HR · Il Nido Immobiliare</div><button class="btn" data-copy="eonboard">Copia template</button></div></details>
+<details><summary>Messaggio per la raccolta dati Onboard</summary><div class="in"><p>Personalizza il messaggio per l’Onboard prima dell’invio.</p><button class="btn line" type="button" data-text-resource="email-raccolta-dati">Apri messaggio per Onboard</button></div></details>
 <details><summary>Scheda Onboard per il tutor</summary><div class="in"><div class="script" id="tutorcard">SCHEDA ONBOARD · USO INTERNO
 
 Nome e cognome: [Nome]
@@ -752,8 +875,6 @@ Ruolo / percorso: [Ruolo]
 Sede: [Sede]
 Data di avvio: [Data]
 Tutor: [Tutor]
-Responsabile Onboard: [Responsabile]
-
 Agenda della settimana: [Link o riferimento]
 Obiettivi e attività previste: [Sintesi]
 Accessi — solo stato, mai password:
@@ -775,45 +896,15 @@ Ti chiediamo di seguire i check previsti, annotare fatti osservabili e completar
 Nella scheda trovi soltanto lo stato degli accessi: le password non devono essere condivise. Per eventuali blocchi usa i referenti indicati nella procedura.
 
 Grazie.</div><button class="btn" data-copy="tutormsg">Copia messaggio</button></div></details>
-<details><summary>Messaggio di benvenuto al candidato</summary><div class="in"><div class="script" id="s5">Benvenuta/o (nome) nella squadra de Il Nido Immobiliare!
-
-Ciao!
-Siamo entusiasti di darti il benvenuto nel nostro team e di iniziare insieme questo nuovo percorso professionale.
-Il Nido Immobiliare è una delle principali agenzie immobiliari della Toscana, con sedi strategiche a Pistoia e Quarrata.
-
-I nostri valori
-La nostra missione è fare felici i clienti e supportarli nel percorso di compravendita. La nostra squadra accoglie le persone che vogliono migliorare e crescere, con ruoli e responsabilità chiari.
-
-La prima impressione è importante!
-In agenzia, l’aspetto è una parte fondamentale nel comunicare professionalità e competenza ai nostri clienti, e per questo cerchiamo di mantenere uno stile elegante e curato.
-
-Per gli uomini, il completo blu rappresenta una scelta ideale. Non è necessario indossare la camicia tutti i giorni, ma un completo abbinato a una maglietta o a un maglioncino ben scelto trasmette comunque serietà, senza compromettere la comodità.
-
-Per le donne, il tailleur è un must: rappresenta un mix perfetto di eleganza e professionalità. Che tu scelga un pantalone o una gonna, l’importante è che il tailleur sia ben strutturato e ti faccia sentire sicura e al top. È fondamentale che l’abbigliamento rispecchi la nostra filosofia di agenzia, dove ogni dettaglio conta nel trasmettere un’immagine di competenza e serietà.
-
-Il tuo ruolo nel nostro successo
-Anche se sei appena entrata/o a far parte del nostro team, il tuo contributo è fondamentale per il successo dell’azienda. Crediamo che ogni nuovo membro porti con sé nuove idee, energie e prospettive che arricchiscono la nostra squadra e ci aiutano a crescere insieme.
-
-Programma della prima giornata
-Per farti conoscere meglio la nostra realtà, abbiamo organizzato le seguenti attività per la tua prima giornata:
-Presentazione del percorso formativo: illustreremo il percorso di formazione e crescita professionale che abbiamo pianificato per te.
-Incontro con i colleghi: avrai l’opportunità di conoscere i membri del team.
-Pranzo in agenzia: concluderemo la mattinata con un pranzo offerto dall’agenzia, un momento per conoscersi meglio e favorire lo spirito di squadra.
-
-Siamo certi che insieme raggiungeremo grandi traguardi e non vediamo l’ora di iniziare questa avventura con te!
-
-Benvenuto a bordo!
-
-#nome
-#ruolo de il Nido Immobiliare</div><button class="btn" data-copy="s5">Copia messaggio</button></div></details>
-<div class="tip"><strong>🎯 Tip da HR esperto</strong>Manda il benvenuto il giorno stesso della decisione: il momento di massimo entusiasmo è subito dopo il “sì”. Personalizza nome, ruolo e un dettaglio del colloquio, così non sembra un messaggio standard. Se il candidato ha scelto di entrare, il benvenuto è anche il primo passo per ridurre il rischio di ripensamenti prima del lunedì.</div>
+<details><summary>Messaggio di benvenuto dopo Check Academy</summary><div class="in"><p>Invialo dopo la Check Academy solo se si decide di iniziare il percorso di onboarding; completa il giorno della prima giornata e le informazioni personalizzate.</p><button class="btn line" type="button" data-text-resource="messaggio-benvenuto-onboard">Apri messaggio di benvenuto</button></div></details>
+<div class="tip"><strong>🎯 Tip da HR esperto</strong>Invia il benvenuto dopo la Check Academy, quando è confermato che si procede con l’onboarding. Personalizza il messaggio con i dettagli e il programma aggiornati per la prima giornata.</div>
 <h2>Materiali</h2>
-<div class="card"><button class="btn lime" data-link="level1">Materiale LEVEL 1</button> <button class="btn lime" data-link="level2">Materiale LEVEL 2</button> <button class="btn lime" data-link="level3">Materiale LEVEL 3</button> <button class="btn line" data-link="procedura">Procedura Nido Test</button>
+<div class="card"><button class="btn lime" data-link="level1">Materiale Step 1</button> <button class="btn lime" data-link="level2">Materiale Step 2</button> <button class="btn lime" data-link="level3">Materiale Step 3</button> <button class="btn line" data-link="procedura">Procedura Nido Test</button>
 </div>
 <div class="grid">
- <div class="card"><h3>Level 1 · Property Finder</h3>4 settimane. Capire quanto sei bravo a parlare: ricerca acquirenti/venditori e affiancamento al tutor.<p><button class="btn lime" data-link="level1">Apri LEVEL 1</button></p></div>
- <div class="card"><h3>Level 2 · Listing Advisor</h3>5 settimane. Capire quanto sei bravo a prendere dei sì: acquisizioni di vendita/locazione.<p><button class="btn lime" data-link="level2">Apri LEVEL 2</button></p></div>
- <div class="card"><h3>Level 3 · Buy Advisor</h3>5 settimane. Capire quanto sei bravo a vendere: acquisizioni e visite agli immobili.<p><button class="btn lime" data-link="level3">Apri LEVEL 3</button></p></div>
+ <div class="card"><h3>Step 1 · Property Finder</h3>4 settimane. Capire quanto sei bravo a parlare: ricerca acquirenti/venditori e affiancamento al tutor.<p><button class="btn lime" data-link="level1">Apri Step 1</button></p></div>
+ <div class="card"><h3>Step 2 · Listing Advisor</h3>5 settimane. Capire quanto sei bravo a prendere dei sì: acquisizioni di vendita/locazione.<p><button class="btn lime" data-link="level2">Apri Step 2</button></p></div>
+ <div class="card"><h3>Step 3 · Buy Advisor</h3>5 settimane. Capire quanto sei bravo a vendere: acquisizioni e visite agli immobili.<p><button class="btn lime" data-link="level3">Apri Step 3</button></p></div>
 </div>
 <div class="card"><h3>Rimandi alle procedure generali</h3><p>Raccolta dati, documenti personali, profili e aggiornamento della Banca Dati HR: usa la procedura generale nella cartella <button class="btn line" data-link="documenti_onboarding">Documenti</button>. Prestazione occasionale e piano provvigionale: consulta <button class="btn line" data-go="p7">Contratti, Compensi e Dotazioni</button>.</p></div>
 <div class="tip"><strong>🎯 Tip da HR esperto</strong>Usa i check-in per raccogliere sempre le stesse tre informazioni: cosa è andato bene, cosa è poco chiaro, cosa serve. Il check con il tutor deve restare un momento di crescita e basarsi su fatti osservabili.</div>
@@ -823,8 +914,87 @@ Benvenuto a bordo!
 <!-- ============ FASE 7 ============ -->
 <section class="panel" id="p7" data-t="Contratti, Compensi e Dotazioni">
 <h1>Contratti, Compensi e Dotazioni</h1>
+<details class="ta-inline-details"><summary>Procedura Payroll · raccolta dati, contratti e gestione documentale</summary><div class="in">
+<p>Procedura per raccogliere i dati del nuovo collaboratore, individuare il tipo di rapporto, predisporre i documenti e gestirne firme e archiviazione. Personalizza i template in base alla tipologia di inserimento e verifica con il consulente del lavoro i dubbi contrattuali o normativi.</p>
+<div class="tip"><strong>Tips operativi · prima di iniziare</strong><ul><li><b>Doppia copia:</b> stampa tutti i documenti contrattuali in duplice copia, ove previsto.</li><li><b>Archiviazione digitale e cartacea:</b> archivia i documenti nella cartella Drive personale e nell’archivio cartaceo aziendale.</li><li><b>Sigla e firma:</b> fai siglare ogni facciata al soggetto interessato per presa visione e raccogli le firme complete negli spazi previsti, ove richieste.</li><li><b>Controllo documentale:</b> prima dell’archiviazione verifica che i documenti siano completi, leggibili e correttamente sottoscritti.</li></ul></div>
+<details><summary>1 · Raccolta dati del candidato · HR</summary><div class="in">
+<p>Alla conferma dell’inserimento, avvia la raccolta dei dati anagrafici e dei documenti richiesti per la tipologia di rapporto.</p><ol><li>Invia l’e-mail di benvenuto e richiesta documentazione.</li><li>Richiedi e raccogli i dati anagrafici e i documenti necessari.</li><li>Verifica completezza e correttezza delle informazioni ricevute.</li><li>Crea la cartella personale del collaboratore su Drive e archivia i documenti.</li></ol>
+<p>Usa i modelli aziendali predisposti, personalizzandoli in base all’inserimento (dipendente, tirocinante, collaboratore o altro):</p><button class="btn line" type="button" data-text-resource="email-raccolta-dati">Messaggio raccolta dati · Onboard</button> <button class="btn line" type="button" data-text-resource="email-raccolta-dati-corporate">E-mail raccolta dati · Corporate</button>
+</div></details>
+<details><summary>2 · Tipologia contrattuale e responsabilità · HR</summary><div class="in">
+<p>Dopo la raccolta dei dati, identifica il rapporto da attivare e assegna la gestione al referente competente.</p><h3>Commerciale con partita IVA · Andrea Meoni</h3><p>Coinvolgi Andrea Meoni per la gestione della partita IVA e dei relativi aspetti amministrativi e fiscali. Andrea si coordina con HR per le informazioni necessarie alla formalizzazione; HR resta responsabile della raccolta iniziale dei dati e della propria parte documentale.</p>
+<h3>Prestazione occasionale · HR</h3><p>Per la predisposizione, usa come riferimento i modelli nella <a href="https://drive.google.com/drive/folders/1wv9t93is0-Q-law_Kf102TTaVnDZjGJu?usp=drive_link" target="_blank" rel="noopener noreferrer">cartella Drive delle prestazioni occasionali</a>. Individua il documento corretto, inserisci i dati del collaboratore e le informazioni concordate sull’attività, importi, condizioni economiche e durata; ricontrolla i dati e prepara il documento per la sottoscrizione.</p>
+</div></details>
+<details><summary>3 · Predisposizione e firma della documentazione · HR</summary><div class="in"><ol><li>Prepara e stampa i documenti in duplice copia, ove previsto.</li><li>Verifica dati e condizioni contrattuali prima dell’invio o della consegna.</li><li>Fai siglare ogni facciata per presa visione ove richiesto e raccogli le firme complete negli spazi previsti.</li><li>Raccogli la firma aziendale dal soggetto autorizzato.</li><li>Recupera entrambe le copie sottoscritte e restituisci al collaboratore la sua copia.</li></ol></div></details>
+<details><summary>4 · Archiviazione documentale · HR</summary><div class="in"><ul><li><b>Digitale:</b> salva tutti i documenti firmati nella cartella Drive personale del collaboratore usando nomi file chiari; verifica completezza e leggibilità.</li><li><b>Cartacea:</b> archivia una copia nell’archivio aziendale, nella posizione dedicata al collaboratore.</li><li>Limita l’accesso alla documentazione personale ai soli referenti autorizzati.</li></ul></div></details>
+<details><summary>Checklist operativa</summary><div class="in">
+<h3>Fase 1 · Raccolta dati e documenti</h3>
+<label class="chk"><input type="checkbox"> Invia l’e-mail di benvenuto e richiesta documentazione, usando il template corretto.</label>
+<label class="chk"><input type="checkbox"> Raccogli i dati anagrafici, il documento d’identità, il codice fiscale e gli ulteriori documenti richiesti per il rapporto.</label>
+<label class="chk"><input type="checkbox"> Verifica completezza e correttezza dei dati; crea la cartella personale Drive e archivia i documenti.</label>
+<h3>Fase 2 · Identificazione del rapporto</h3>
+<label class="chk"><input type="checkbox"> Identifica la tipologia contrattuale e conferma le condizioni con il referente aziendale.</label>
+<label class="chk"><input type="checkbox"> Per un commerciale con partita IVA, coinvolgi Andrea Meoni; per una prestazione occasionale, procedi con HR.</label>
+<h3>Fase 3 · Prestazione occasionale, se applicabile</h3>
+<label class="chk"><input type="checkbox"> Accedi alla cartella Drive e individua il modello corretto.</label>
+<label class="chk"><input type="checkbox"> Inserisci dati del collaboratore, attività, durata e condizioni economiche concordate; verifica il documento.</label>
+<h3>Fase 4 · Firme e sottoscrizione</h3>
+<label class="chk"><input type="checkbox"> Stampa i documenti in duplice copia, ove previsto.</label>
+<label class="chk"><input type="checkbox"> Verifica sigle su ogni facciata ove richieste e firme complete negli spazi previsti.</label>
+<label class="chk"><input type="checkbox"> Raccogli le firme del collaboratore e dell’azienda tramite il soggetto autorizzato.</label>
+<label class="chk"><input type="checkbox"> Recupera le copie firmate e restituisci al collaboratore la copia di sua competenza.</label>
+<h3>Fase 5 · Archiviazione</h3>
+<label class="chk"><input type="checkbox"> Archivia una copia digitale leggibile nella cartella personale Drive.</label>
+<label class="chk"><input type="checkbox"> Archivia la copia cartacea nell’archivio aziendale.</label>
+<label class="chk"><input type="checkbox"> Verifica che fascicolo digitale e cartaceo siano completi e aggiornati.</label>
+</div></details>
+<p class="src">Risultato atteso: cartella personale completa, documenti correttamente predisposti e firmati, copie archiviate e responsabilità chiare tra HR e referente aziendale.</p>
+</div></details>
 <h2>Prestazione occasionale</h2>
-<div class="card">Art. 2222 C.C.: totale autonomia, nessuna subordinazione né orari fissi. Compenso legato agli obiettivi (1.000€ lordi = 800€ netti, ritenuta d’acconto 20% versata dall’azienda). Limite di 5.000€ annui. Foro competente esclusivo: Firenze. Firma dell’Allegato A (dichiarazione sostitutiva). Base per i dipendenti: CCNL Commercio (40 ore).</div>
+<div class="card">Art. 2222 C.C.: totale autonomia, nessuna subordinazione né orari fissi. Compenso legato agli obiettivi (1.000€ lordi = 800€ netti, ritenuta d’acconto 20% versata dall’azienda). Limite di 5.000€ annui. Foro competente esclusivo: Firenze. Firma dell’Allegato A (dichiarazione sostitutiva). Base per i dipendenti: CCNL Commercio (40 ore).<p>Per predisporre una prestazione occasionale, parti come base dai modelli e documenti in questa <a href="https://drive.google.com/drive/folders/1wv9t93is0-Q-law_Kf102TTaVnDZjGJu?usp=drive_link" target="_blank" rel="noopener noreferrer">cartella Drive</a>. Verifica che siano aggiornati e fai riferimento alla consulente del lavoro per i dubbi contrattuali.</p><h3>Copie, firme e archiviazione</h3><p>Prepara e fai firmare tutti i documenti in <b>due copie</b>: una copia resta all’azienda e va archiviata sia in formato cartaceo sia digitale; l’altra viene restituita al collaboratore. Controlla che <b>ogni facciata sia siglata</b> e che siano apposte le firme complete in tutti i punti previsti dal documento.</p></div>
+<details class="ta-inline-details"><summary>Comodato d’uso gratuito</summary><div class="in"><p>Per predisporre il comodato d’uso gratuito, compila il <a href="https://drive.google.com/file/d/19yDtWcEgar5bBRNW5eoyTl1JrlybGTN9/view?usp=sharing" target="_blank" rel="noopener noreferrer">documento disponibile su Google Drive</a>. Verifica la versione aggiornata e completa tutte le firme previste prima di archiviarlo e consegnarne copia alle parti interessate.</p></div></details>
+<details class="ta-inline-details"><summary>Procedura: attivazione di un tirocinio</summary><div class="in">
+<p>Gestisci le fasi con la consulente del lavoro e non far iniziare il tirocinio finché la consulente non ha confermato il completamento degli adempimenti e l’invio della comunicazione obbligatoria (CO).</p>
+<details><summary>Fase 1 · Raccolta delle informazioni e dei documenti · Azienda</summary><div class="in">
+<h3>Dati del tirocinante</h3><ul><li>Documento d’identità in corso di validità.</li><li>Scheda Anagrafico-Professionale (SAP) o scheda professionale.</li><li>Titolo di studio, con luogo e data di conseguimento.</li><li>Indirizzo e-mail e numero di cellulare.</li></ul>
+<h3>Informazioni aziendali</h3><ul><li>Individua il tutor aziendale e raccogli e-mail e numero di cellulare.</li><li>Definisci l’orario settimanale con la consulente; il riferimento di massimo 39 ore va verificato rispetto alla normativa e alla tipologia di tirocinio applicabili.</li></ul>
+<h3>Progetto formativo</h3><p>Definisci mansione, profilo professionale, competenze da acquisire, attività operative e obiettivi formativi. Se esiste già un progetto aziendale per una mansione analoga (ad esempio quello di Peccianti), usalo come riferimento verificandone l’attualità. Per una mansione nuova, definisci il profilo formativo insieme alla consulente.</p>
+<h3>Archiviazione</h3><p>Crea su Google Drive la cartella <b>RISORSE UMANE &gt; TIROCINI &gt; NOME E COGNOME TIROCINANTE</b>. Salva al suo interno documento d’identità, scheda professionale, titolo di studio e gli eventuali ulteriori documenti richiesti. Limita l’accesso alla cartella ai soli referenti autorizzati.</p>
+</div></details>
+<details><summary>Fase 2 · Consulente del lavoro e Fondazione Studi</summary><div class="in">
+<p>Invia la documentazione raccolta a Emanuela Mancini, consulente del lavoro. La consulente verifica i documenti, avvia la pratica telematica con Fondazione Studi (ente promotore), carica i dati, predispone gli atti e gestisce i costi di attivazione e la polizza assicurativa RCT obbligatoria.</p>
+<p>La consulente fornisce le informative privacy da far firmare al tirocinante. Dopo la firma, recuperale, archiviala nella cartella Drive dedicata e ritrasmettile alla consulente perché siano allegate alla pratica.</p>
+</div></details>
+<details><summary>Fase 3 · Firma della convenzione · Azienda</summary><div class="in"><p>Quando Fondazione Studi comunica che la convenzione è pronta, accedi al portale della Regione Toscana, apri la procedura di firma, verifica i documenti e firma la convenzione aziendale. La convenzione disciplina il tirocinio tra ente promotore e azienda ospitante. Verifica poi che Fondazione Studi abbia apposto la propria firma.</p></div></details>
+<details><summary>Fase 4 · Progetto formativo e firme finali</summary><div class="in"><ol><li><b>Fondazione Studi:</b> firma la convenzione dopo l’azienda.</li><li><b>Tirocinante:</b> firma la documentazione prevista.</li><li><b>Azienda:</b> paga la marca da bollo richiesta.</li><li><b>Azienda:</b> firma il progetto formativo individuale, che definisce attività, obiettivi, tutor e modalità del tirocinio.</li></ol></div></details>
+<details><summary>Fase 5 · Conferma dell’attivazione e ingresso</summary><div class="in"><p>Prima dell’inizio, chiedi alla consulente conferma che siano completati e validi:</p><ul><li>Convenzione firmata da tutti i soggetti previsti.</li><li>Progetto formativo firmato.</li><li>Documentazione amministrativa completa.</li><li>Copertura assicurativa attiva.</li><li>Comunicazione obbligatoria di instaurazione del tirocinio (CO) trasmessa nei tempi previsti.</li></ul><p><b>Non confermare la data d’inizio e non far iniziare l’attività finché la consulente non ha confermato l’invio della CO e il completamento degli adempimenti.</b></p></div></details>
+<details><summary>Checklist operativa</summary><div class="in">
+<h3>Fase 1 · Raccolta</h3>
+<label class="chk"><input type="checkbox"> Richiedi documento d’identità, SAP/scheda professionale e titolo di studio con luogo e data.</label>
+<label class="chk"><input type="checkbox"> Raccogli e-mail e cellulare del tirocinante.</label>
+<label class="chk"><input type="checkbox"> Individua il tutor e raccogli e-mail e cellulare.</label>
+<label class="chk"><input type="checkbox"> Definisci l’orario settimanale con la consulente e verifica il limite applicabile (riferimento fornito: massimo 39 ore).</label>
+<label class="chk"><input type="checkbox"> Definisci mansione, profilo, competenze, attività e obiettivi formativi con la consulente.</label>
+<label class="chk"><input type="checkbox"> Verifica se esiste un progetto analogo riutilizzabile e aggiornato.</label>
+<label class="chk"><input type="checkbox"> Crea la cartella Drive dedicata e archivia i documenti con accesso limitato.</label>
+<h3>Fase 2 · Consulente e Fondazione Studi</h3>
+<label class="chk"><input type="checkbox"> Invia i documenti alla consulente e verifica l’avvio della pratica telematica.</label>
+<label class="chk"><input type="checkbox"> Ricevi le informative privacy, falle firmare, archivial e inviale alla consulente.</label>
+<label class="chk"><input type="checkbox"> Verifica caricamento documenti, pagamento della polizza RCT e costi di attivazione.</label>
+<h3>Fase 3 · Convenzione</h3>
+<label class="chk"><input type="checkbox"> Attendi la conferma che la convenzione sia pronta.</label>
+<label class="chk"><input type="checkbox"> Accedi al portale della Regione Toscana, verifica i documenti e firma la convenzione aziendale.</label>
+<label class="chk"><input type="checkbox"> Verifica la firma di Fondazione Studi.</label>
+<h3>Fase 4 · Firme finali</h3>
+<label class="chk"><input type="checkbox"> Verifica la firma del tirocinante sulla documentazione prevista.</label>
+<label class="chk"><input type="checkbox"> Paga la marca da bollo richiesta.</label>
+<label class="chk"><input type="checkbox"> Firma il progetto formativo individuale e verifica che la documentazione sia completa.</label>
+<h3>Fase 5 · Attivazione</h3>
+<label class="chk"><input type="checkbox"> Chiedi alla consulente conferma del completamento della pratica e dell’attivazione della copertura assicurativa.</label>
+<label class="chk"><input type="checkbox"> Verifica con la consulente l’invio della CO prima dell’inizio effettivo.</label>
+<label class="chk"><input type="checkbox"> Solo dopo le conferme, conferma la data di inizio e archivia la documentazione definitiva su Drive.</label>
+</div></details>
+</div></details>
 <div class="card"> <button class="btn line" data-link="onestop">Piano crescita su One Stop</button></div>
 <h2>Piano carriera · Nido Academy</h2>
 <div class="grid">
@@ -855,7 +1025,7 @@ Benvenuto a bordo!
 <section class="panel" id="p12" data-t="Valori e Cultura">
 <h1>Valori e Cultura</h1>
 <p class="lead">L’HR è il Chief Culture Officer: non produce fatturato direttamente, ma lo rende possibile. Secondo Deming l’85% dei problemi dipende dai sistemi, non dalle persone.</p>
-<div class="card"><h3>Dalla cultura alle regole</h3>I principi qui sotto trovano applicazione nel sistema Forte Performance Management e nelle procedure operative. <button class="btn line" data-go="pF">Sistema Forte</button> <button class="btn line" data-go="pG">Governance, clima e agende</button></div>
+<div class="card"><h3>Dalla cultura alle regole</h3>I principi qui sotto trovano applicazione nel sistema Forte Performance Management e nelle procedure operative. <button class="btn line" data-go="pF">Sistema Forte</button> <button class="btn line" data-go="pAreaPeople">Governance e clima</button></div>
 <div class="grid"><div class="card"><h3>Segnalare senza incolpare</h3>Fatti oggettivi, subito, con la formula “penso che sia non funzionale”.</div><div class="card"><h3>Presa in carico totale</h3>Gestire significa monitorare il feedback fino al completamento.</div><div class="card"><h3>Squadra, non famiglia</h3>Ruoli e regole chiare, energia positiva. Chi è polemico va accompagnato all’uscita.</div></div><div class="tip"><strong>🎯 Tip da HR esperto</strong>Una cultura si vede nei comportamenti ripetuti. Scegli 3 comportamenti osservabili per ogni valore (es. “chiude sempre il giro di feedback”), inseriscili nelle domande del colloquio e nei check Academy: se non sono misurabili, restano slogan. Il giudizio “funzionale/non funzionale” vale per i fatti, mai per la persona.</div>
 </section>
 
@@ -879,22 +1049,8 @@ Benvenuto a bordo!
 <div class="card ph b"><h3>Fase B · Monitoraggio mensile</h3><ul><li><b>Entro il giorno 6</b> di ogni mese: incontro individuale (1:1) con i collaboratori.</li><li>Funzione <b>Valutazione Parziale</b>: mostra la proiezione del risultato finale come se il trimestre terminasse in quel momento.</li><li>Feedback registrati nelle <b>Note Mensili</b>, per rendere tracciabile il percorso di miglioramento.</li></ul></div>
 <div class="card ph c"><h3>Fase C · Valutazione finale</h3><ul><li><b>Entro il giorno 6</b> del mese successivo alla chiusura del Quarter il manager consolida la valutazione.</li><li>Il collaboratore ha <b>24 ore</b> per visionare la scheda, dare feedback o chiedere un allineamento, prima del passaggio definitivo ai sistemi di payroll.</li></ul></div>
 <details open><summary>D · Fonti dei dati e supporto HR</summary><div class="in"><ul><li><b>Dati quantitativi:</b> piattaforme ufficiali N Space HR, Origin e ClickUp.</li><li><b>Criteri qualitativi</b> (reparti Coordinator, HR, Formazione): ogni mese l’HR invia moduli di sondaggio alle figure designate, raccoglie le risposte in un file riepilogativo e lo consegna ai manager per la mappatura in piattaforma, con il supporto dei referenti tecnici.</li></ul></div></details>
-<div class="card"><button class="btn lime" data-go="pB">Forte e busta paga</button> <button class="btn line" data-go="pG">Governance, clima e agende</button> <button class="btn line" data-go="p9">Forte e Nido Academy</button></div>
+<div class="card"><button class="btn lime" data-go="pB">Forte e busta paga</button> <button class="btn line" data-go="pAreaPeople">Governance e clima</button> <button class="btn line" data-go="p9">Forte e Nido Academy</button></div>
 <div class="tip"><strong>🤖 Idea AI</strong>Sintesi automatica delle risposte ai sondaggi qualitativi mensili nel file riepilogativo per i manager. <b>Discutine con Benedetta ed Elia per implementare AI.</b></div>
-</section>
-<section class="panel" id="pG" data-t="Governance, clima e agende">
-<h1>Governance, clima e agende</h1>
-<p class="lead">Sviluppo organizzativo, clima aziendale e coordinamento commerciale: procedure operative, distinte dalle regole di Forte.</p>
-<h2>Governance e Nidex <span class="pill">Ogni 3 mesi</span></h2>
-<div class="flow"><div><b>Governance</b>Decisioni di miglioramento o modifica dell’organizzazione interna, compresi cambi di ruolo e sostituzioni dei team leader. Presieduta da un <b>Facilitatore</b>.</div><div><b>Nidex</b>Entro la settimana seguente: traduce le decisioni in progetti concreti e procedure.</div><div><b>Pomeriggi dedicati</b>Elaborazione e implementazione dei progetti di miglioramento continuo.</div></div>
-<h2>Monitoraggio del clima aziendale</h2>
-<div class="grid"><div class="card"><h3>Questionario anonimo sul Clima</h3>Soddisfazione, ambiente di lavoro, affiancamento, chiarezza dei ruoli, eventuali problematiche.<br><br><a class="btn lime" href="/documenti/questionario-clima.pdf">Apri il questionario</a></div>
-<div class="card"><h3>Valutazione Attitudinale · The Job Game</h3>Risomministrata periodicamente alle figure interne. L’analisi del profilo, incluse le Psicotrappole, aiuta a individuare attitudini, soft skill e percorsi di miglioramento personalizzati.<br><br><button class="btn line" data-go="pj1">Area The Job Game</button></div></div>
-<h2>Agenda condivisa e monitoraggio giornaliero</h2>
-<p class="lead">L’agenda condivisa rende visibili le attività e facilita la sincronizzazione tra reparti. Il controllo spetta a ciascun Coordinator.</p>
-<div class="card"><ol><li><b>Ogni giorno, 09:00–09:30:</b> il Coordinator controlla l’agenda dei collaboratori del proprio ufficio.</li><li>Verifica che siano registrate presenze in ufficio, appuntamenti con i clienti e blocchi per ricerca o attività amministrative.</li><li>Controlla la corretta registrazione di diciture come “Permesso” e “No Agenzia”.</li><li>Il collaboratore <b>non</b> deve essere in ufficio alle 09:00 se non ha un’attività programmata.</li><li>Se la risorsa non è in sede e l’agenda non ha indicazioni o blocchi operativi: il Coordinator segnala alla <b>HR Business Partner</b> di riferimento <b>entro le 09:40</b>.</li><li>Alla <b>terza segnalazione consecutiva</b> sullo stesso collaboratore il caso passa al <b>Responsabile d’Ufficio</b> per un colloquio di allineamento.</li></ol></div>
-<div class="tip"><strong>Ruolo dell’HR</strong>Riceve le segnalazioni entro le 09:40 (HR Business Partner) e tiene traccia della ricorrenza, perché alla terza consecutiva il caso esce dall’HR.</div>
-<div class="tip"><strong>🤖 Idea AI</strong>Controllo automatico delle agende alle 09:00 con segnalazione preliminare delle anomalie, e analisi delle risposte del questionario clima. <b>Discutine con Benedetta ed Elia per implementare AI.</b></div>
 </section>
 <section class="panel" id="pB" data-t="Busta paga">
 <h1>Come leggere la busta paga</h1>
@@ -958,12 +1114,12 @@ Benvenuto a bordo!
  <div class="card"><h3>Candidate experience</h3>Feedback entro 6 giorni a tutti, anche ai rifiuti, e sondaggio cNPS. Chi riceve un no rispettoso resta ambasciatore del brand.</div>
 </div>
 <div class="card"><h3>Contenuti che già abbiamo</h3><span class="pill">Nido Today (foto dei nuovi ingressi)</span><span class="pill">Gran Gala</span><span class="pill">Raccolta Olive · Nidoil</span><span class="pill">Torneo Padel</span><span class="pill">Marco’s Day</span><span class="pill">Nido’s Day</span><span class="pill">Cena di Natale</span><p style="font-size:14px">Ogni evento è materiale per Reel, storie e annunci. Chiedi ai partecipanti il consenso prima di pubblicare foto e video.</p>
-<a class="btn lime" data-link="sito">Sito Il Nido Immobiliare</a></div>
+</div>
 <div class="web"><strong>🌐 Dalle best practice online</strong><ul>
 <li><b>Parti dai tuoi migliori:</b> individua i collaboratori top e le loro caratteristiche (tratti, motivazioni, valori): sono il modello delle persone che vuoi attrarre.</li>
 <li><b>Advocacy volontaria con regole scritte:</b> chi condivide lo fa per scelta, dentro linee guida semplici. Parti con un piccolo gruppo pilota e poi allarga.</li>
 <li><b>Referral con incentivi:</b> premia chi segnala; un bonus aggiuntivo dopo 90–120 giorni di permanenza del segnalato incentiva segnalazioni di qualità. Comunica internamente quando un referral entra.</li>
-<li><b>Ascolta anche dopo l’assunzione:</b> ripeti i sondaggi a tappe (fine settimana test, fine Level 1, 2, 3) per capire l’esperienza reale e correggere il tiro.</li>
+<li><b>Ascolta anche dopo l’assunzione:</b> ripeti i sondaggi a tappe (fine settimana test, fine Step 1, Step 2 e Step 3) per capire l’esperienza reale e correggere il tiro.</li>
 <li><b>Il processo di selezione è il tuo biglietto da visita:</b> rapidità, chiarezza e rispetto parlano della cultura più di qualunque slogan.</li></ul>
 <div class="src">Fonti consultate: Indeed (employer brand), Oktopost, SHRM, Juicebox, guide di employee advocacy.</div></div>
 <div class="tip"><strong>💡 Suggerimento HR</strong>Prima di pubblicare un annuncio o un video, chiediti: “un candidato capirebbe da qui come si lavora davvero da noi?”. Se no, riscrivi.</div>
@@ -983,9 +1139,9 @@ Benvenuto a bordo!
  <div class="card"><h3>🔢 Counter Daily Work</h3>Per l’Onboard: tiene traccia dell’attività quotidiana, delle persone contattate e dei risultati, per capire le proprie conversioni.</div>
  <div class="card"><h3>📈 Report Tutor</h3>Dashboard per il Tutor: storico, confronto tra periodi, cali di performance e differenze tra affiancamento e lavoro in autonomia.</div>
 </div>
-<h2>Il percorso a livelli</h2>
-<div class="wk"><div><b>Nido Test</b><br>1 settimana</div><div><b>Level 1</b><br>Property Finder<br>4 sett.</div><div><b>Level 2</b><br>Listing Advisor<br>5 sett.</div><div><b>Level 3</b><br>Buy Advisor<br>5 sett.</div></div>
-<details open><summary>Come si supera ogni livello (punti su Forte)</summary><div class="in"><ul><li><b>Level 1:</b> 20 punti (1pt = 1 notizia o 4 visite; 1,5pt = fondo con incarico; 3pt = notizia a incarico o acquirente a vendita). Il Tutor gestisce le notizie (“Bonus Agenzia”).</li><li><b>Level 2:</b> 2 incarichi (1 residenziale) o 4 affitti. Il 1° lo gestisce il Tutor, il 2° l’Onboard con il Tutor in affiancamento.</li><li><b>Level 3:</b> 2 transazioni in acquisizione o 1 in vendita, o 4 locazioni.</li><li><b>Settimana di test:</b> il venerdì il Tutor compila la checklist di valutazione su Forte. Rating e FLX (Fuori Linea X) impattano la valutazione.</li></ul></div></details>
+<h2>Il percorso dopo il Nido Test</h2>
+<div class="wk"><div><b>Nido Test</b><br>1 settimana</div><div><b>Step 1</b><br>Property Finder<br>4 sett.</div><div><b>Step 2</b><br>Listing Advisor<br>5 sett.</div><div><b>Step 3</b><br>Buy Advisor<br>5 sett.</div></div>
+<details open><summary>Come si supera ogni step (punti su Forte)</summary><div class="in"><ul><li><b>Step 1:</b> 20 punti (1pt = 1 notizia o 4 visite; 1,5pt = fondo con incarico; 3pt = notizia a incarico o acquirente a vendita). Il Tutor gestisce le notizie (“Bonus Agenzia”).</li><li><b>Step 2:</b> 2 incarichi (1 residenziale) o 4 affitti. Il 1° lo gestisce il Tutor, il 2° l’Onboard con il Tutor in affiancamento.</li><li><b>Step 3:</b> 2 transazioni in acquisizione o 1 in vendita, o 4 locazioni.</li><li><b>Settimana di test:</b> il venerdì il Tutor compila la checklist di valutazione su Forte. Rating e FLX (Fuori Linea X) impattano la valutazione.</li></ul></div></details>
 <details><summary>Cosa fa l’HR in questo progetto</summary><div class="in"><ul><li>Richiede la creazione dell’account Real Smart (Filippo) e di Google/N-Space (Elia); il primo giorno spiega l’attivazione di Forte e Origin.</li><li>Verifica che l’Onboard partecipi a tutte le attività e che il Tutor compili Check Academy ogni settimana.</li><li>Raccoglie i feedback di Tutor e Onboard: cosa aggiungere, cosa serve di più al Tutor, cosa aiuterebbe gli Onboard. Scrivi a <b>academy@nido20.com</b>.</li></ul></div></details>
 <div class="card"><button class="btn lime" data-link="onestop">Apri One Stop</button> <a class="btn line" href="mailto:academy@nido20.com">Scrivi all’Academy</a></div>
 <div class="web"><strong>🌐 Buone pratiche di apprendimento e valutazione</strong><ul><li>Valutazioni brevi e <b>regolari</b> (come le stelline settimanali) funzionano meglio di un giudizio unico a fine percorso.</li><li>Una valutazione a punteggio con criteri chiari e giustificazioni scritte riduce i bias, come nella griglia Nido Bias Free.</li><li>Rivedi periodicamente che Tutor e HR usino davvero gli strumenti: senza monitoraggio si torna alle vecchie abitudini.</li></ul><div class="src">Fonti consultate: Training Industry, Criteria, JobScore.</div></div>
@@ -1005,21 +1161,10 @@ Benvenuto a bordo!
  <div class="day"><h3>Venerdì</h3>Role play (2° scenario del tema) · formazione avanzata con EXCO</div>
 </div>
 <details open><summary>Role play: i 18 temi del Quarter Program</summary><div class="in">Un tema a settimana, in rotazione (ciclo ripetuto):<ol style="columns:2;column-gap:28px"><li>Schema di acquisizione e Metodo Nido (1)</li><li>Schema di acquisizione (2)</li><li>Il ruolo del venditore (1): identità e KPI</li><li>Il ruolo del venditore (2): giornata tipo e schede</li><li>Prequalifica acquirente e speed dating house</li><li>Contrattualistica (1): incarico di mediazione</li><li>Contrattualistica (2): proposta, compromesso e rogito</li><li>Contrattualistica (3): affitti</li><li>Conformità urbanistica</li><li>Procedure su Origin</li><li>Happy price e agent pricing</li><li>Annuncio emozionale, recensioni e cura del cliente</li><li>Le persone: stili PCTV e 9 personalità</li><li>Comunicazione: dialogo strategico</li><li>Personal branding</li><li>Time management</li><li>Mindset, microhabits e cultura Nido (Nidocracy e Nidality)</li><li>Recap e role play finale (gara a squadre)</li></ol></div></details>
-<details><summary>Ospiti e formazioni speciali</summary><div class="in">Nelle giornate con ospite il role play delle 11:00–12:30 è dedicato al suo tema. Profili previsti: Stefano Bartoli (role play completo dall’acquisizione alla firma), notaio, esperto di mutui e finanziamenti, commercialista/fiscalista immobiliare, geometra/tecnico catasto, esperto di home staging e foto, coach di negoziazione, imprenditore ospite (bilancio e obiettivi), Martin Meoni (resilienza, spunti Muay Thai), Mondo Pistoiese (capitano o allenatore). Nomi e date da confermare.</div></details>
+<h2>Ospiti e formazioni speciali</h2>
+<details><summary>Ospiti e formatori</summary><div class="in">Nelle giornate con ospite il role play delle 11:00–12:30 è dedicato al suo tema. Profili previsti: Stefano Bartoli (role play completo dall’acquisizione alla firma), notaio, esperto di mutui e finanziamenti, commercialista/fiscalista immobiliare, geometra/tecnico catasto, esperto di home staging e foto, coach di negoziazione, imprenditore ospite (bilancio e obiettivi), Martin Meoni (resilienza, spunti Muay Thai), Mondo Pistoiese (capitano o allenatore). Nomi e date da confermare.</div></details>
 <details><summary>Formazione aziendale, patentino e coordinatrici</summary><div class="in">Nel foglio “Formazioni produzione” trovi tre percorsi: Formazione aziendale (include gli aggiornamenti di Elia e Benedetta), Formazione patentino e Formazione coordinatrici (turno A/B). Nei martedì di formazione aziendale e nei venerdì avanzati il role play è già dentro la sessione.</div></details>
-<h2>Eventi aziendali e team bonding</h2>
-<div class="grid">
- <div class="card"><h3>🥂 Gran Gala</h3>Cena di gala aziendale a febbraio.</div>
- <div class="card"><h3>🫒 Raccolta Olive · Nidoil</h3>Giornata di team bonding. Nel 2027 è previsto martedì 16 novembre: quel giorno non ci sono role play e Lead strategy.</div>
- <div class="card"><h3>🎾 Torneo Padel</h3>Sfida a squadre fuori dall’ufficio.</div>
- <div class="card"><h3>🎉 Marco’s Day · Nido’s Day</h3>Giornate dedicate al fondatore e alla squadra (Marco’s Day previsto di domenica).</div>
- <div class="card"><h3>🎄 Cena di Natale</h3>Prevista giovedì 16 dicembre.</div>
- <div class="card"><h3>☕ Momenti quotidiani</h3>Caffè con Martina il mercoledì alle 17:00 per i nuovi, Nido Today per accogliere chi entra, check serale delle 18:00.</div>
-</div>
-<div class="tip"><strong>Pause del calendario</strong>Agosto in pausa; pausa natalizia dal 24 al 31 dicembre; nessun appuntamento nelle festività. Ipotesi da confermare.</div>
-<details><summary>Le nostre sedi</summary><div class="in"><ul><li><b>Pistoia 1:</b> Via Dalmazia 7 · 0573/27401</li><li><b>Pistoia 2:</b> Via Luigi Galvani 9 · 0573/1794761</li><li><b>Quarrata:</b> Piazza Risorgimento 32-33 · 0573/1798093</li></ul></div></details>
-<div class="tip"><strong>💡 Suggerimento HR</strong>Quando fissi la settimana di test controlla il calendario: evita di far iniziare un Onboard in una settimana con eventi senza orario o con ospiti da confermare.</div>
-<div class="tip"><strong>🎯 Tip da HR esperto</strong>Metti in agenda gli eventi chiave (Gala, Natale) almeno 8 settimane prima, con la sede e il budget confermati: la partecipazione cresce quando la data è nota in anticipo.</div>
+<p class="src">Per la preparazione della formazione HR e l’organizzazione di team bonding, inaugurazioni ed eventi, consulta la sezione principale “Training &amp; Development” → “Formazione speciale ed eventi”.</p>
 </section>
 
 
@@ -1034,7 +1179,6 @@ Benvenuto a bordo!
 <div class="grid">
 <div class="card"><h3>Il Ragionamento Perfetto</h3><p class="mt">“Meglio non consegnare nulla che fare qualcosa di imperfetto.”</p>Iper-analitico e paralizzato dalla paura di sbagliare.<br><b>In azienda:</b> lavori mai conclusi nei tempi, difficoltà con un ambiente dinamico.</div>
 <div class="card"><h3>La Catastrofizzazione</h3><p class="mt">“Se qualcosa va storto, andrà sempre peggio.”</p>Davanti a un errore pensa subito al peggio invece di cercare soluzioni.<br><b>In azienda:</b> blocca il problem-solving, alimenta la tensione nel team e il rischio burnout.</div>
-<div class="card"><h3>Atteggiamento Difensivo</h3><p class="mt">“Hai presente il collega permaloso?”</p>Diffida e si difende in via preventiva.<br><b>In azienda:</b> resistenza al cambiamento, difficoltà nel team, conflitti.</div>
 <div class="card"><h3>L’Evitante</h3><p class="mt">“Evitare compiti fino allo sfinimento.”</p>Evita situazioni, compiti o decisioni percepiti come stressanti.<br><b>In azienda:</b> poco problem-solving, fatica a innovare e a chiudere i compiti scomodi.</div></div>
 <div class="card" style="margin-top:14px"><h3>Come lo usiamo al Nido</h3><ul><li>Il candidato compila il questionario prima del colloquio (link nell’e-mail di conferma).</li><li>Il report si legge in preparazione al colloquio e guida le domande da approfondire.</li><li>La percentuale entra nella griglia Nido Bias Free (soglia 70%).</li><li>Nei rifiuti è la base per un feedback utile e strutturato.</li></ul>
 <span class="tag">Contenuti operativi integrati in questa procedura</span></div>
@@ -1093,7 +1237,7 @@ Benvenuto a bordo!
   <label class="ops-field"><span>Categoria</span><input id="taskCategory" required list="taskCategories" maxlength="60"><datalist id="taskCategories"><option>Recruiting</option><option>Comunicazioni</option><option>Amministrazione</option><option>Onboarding</option><option>Sistemi HR</option><option>Academy e Forte</option><option>Contratti</option><option>Pianificazione</option></datalist></label>
   <label class="ops-field wide"><span>Descrizione</span><textarea id="taskDescription" maxlength="500" placeholder="Descrizione e informazioni utili"></textarea></label>
   <label class="ops-field"><span>Responsabile</span><input id="taskOwner" maxlength="80" placeholder="HR, tutor o referente"></label>
-  <label class="ops-field"><span>Procedura collegata</span><select id="taskProcedure"><option value="">Nessuna</option><option value="p2">Gestione candidature</option><option value="p3">Colloqui</option><option value="p6">Onboarding e Nido Test</option><option value="p9">Forte e Nido Academy</option><option value="pj1">The Job Game</option><option value="pG">Governance e clima</option></select></label>
+  <label class="ops-field"><span>Procedura collegata</span><select id="taskProcedure"><option value="">Nessuna</option><option value="p2">Gestione candidature</option><option value="p3">Colloqui</option><option value="p6">Onboarding e Nido Test</option><option value="p9">Forte e Nido Academy</option><option value="pj1">The Job Game</option><option value="pAreaPeople">People &amp; Culture · Governance e clima</option></select></label>
   <label class="ops-field"><span>Importanza <output id="priorityValue">1</output></span><input id="taskPriority" type="range" min="1" max="100" value="1"></label>
   <label class="ops-field"><span>Urgenza</span><select id="taskUrgency"><option value="bassa">Bassa</option><option value="normale" selected>Normale</option><option value="media">Media</option><option value="alta">Alta</option></select></label>
   <label class="ops-field"><span>Scadenza, se applicabile</span><input id="taskDeadline" type="date"></label>
@@ -1163,7 +1307,7 @@ Grazie a tutti per la collaborazione, e ancora buon compleanno [Nome breve]! �
 <script>
 window.HRLearningMode=true;
 /* ===== Link ai file: incolla qui gli URL reali (Drive, One Stop, Forte, Loom...) ===== */
-var LINKS={jg:'',raffica:'/documenti/foglio-raffica.pdf',onboard_step:'/documenti/da-onboard-a-real-estate.pdf',procedura_pc:'/guida-hr.html#p7',exit_checklist:'/documenti/checklist-uscita.html',exit_form:'/documenti/modulo-nido-exit.html',sito:'',lavora:'',onestop:'https://nspace-one-stop-dashboard.bolt.host/commission',forte:'',level1:'/documenti/materiale-level-1.pdf',level2:'/documenti/materiale-level-2.pdf',level3:'/documenti/materiale-level-3.pdf',drive_eventi:'',excel_contratti:'',loom:'',procedura:'/guida-hr.html#p6',documenti_onboarding:'/documenti/index.html',nidos_game:'/documenti/nidos-game.mp4',foto_badge:'https://canva.link/mcjfmarekyu81po',calendario:'',roleplay:'',video_academy:'',video_check:'',video_counter:'',video_report:''};
+var LINKS={jg:'',raffica:'/documenti/foglio-raffica.pdf',onboard_step:'/documenti/da-onboard-a-real-estate.pdf',procedura_pc:'/guida-hr.html#p7',exit_checklist:'/documenti/checklist-uscita.html',exit_form:'/documenti/modulo-nido-exit.html',lavora:'',onestop:'https://nspace-one-stop-dashboard.bolt.host/commission',forte:'',level1:'/documenti/materiale-level-1.pdf',level2:'/documenti/materiale-level-2.pdf',level3:'/documenti/materiale-level-3.pdf',drive_eventi:'',excel_contratti:'',loom:'',procedura:'/guida-hr.html#p6',documenti_onboarding:'/documenti/index.html',nidos_game:'/documenti/nidos-game.mp4',foto_badge:'https://canva.link/mcjfmarekyu81po',calendario:'',roleplay:'',video_academy:'',video_check:'',video_counter:'',video_report:''};
 
 /* ===== Nido One Stop: strumenti (aggiungi l’URL in LINKS con la chiave indicata) ===== */
 var TOOLS=[['Griglia Strumenti','os_griglia'],['Zona Procedure','os_procedure'],['Organigrammi','os_organigrammi','Riferimento per proxy e manager (vedi Time-Off).','p11'],['Nidocracy','os_nidocracy'],['Piano Crescita Nido','os_crescita','Piano carriera e compensi.','p7'],['Onboarding','os_onboarding','Percorso e materiali del nuovo ingresso.','p6'],['Presenza','os_presenza'],['Koda','os_koda'],['Calendario','calendario'],['Ticketing','os_ticketing'],['Dispositivi','os_dispositivi'],['Biblioteca Nido','os_biblioteca'],['Password e Contatti','os_password'],['Ordini','os_ordini'],['Roadmap','os_roadmap']];
@@ -1173,15 +1317,14 @@ document.querySelectorAll('[data-link]').forEach(function(b){var u=LINKS[b.datas
 document.querySelectorAll('[data-print]').forEach(function(b){b.onclick=function(){window.print()}});
 /* ===== Navigazione per aree HR ===== */
 var AREAS=[
- {n:'Dashboard',i:'DB',p:['pOS']},
+ {n:'Mansionario HR',i:'HR',p:['pMansionario']},
  {n:'Talent Acquisition',i:'TA',p:['pAreaTA','p1','p2','p3','p4','p5']},
  {n:'Employer Branding',i:'EB',p:['pAreaEB','p8']},
  {n:'Payroll & Administration',i:'PA',p:['pAreaPayroll','p7','p11','pB','p15']},
  {n:'Onboarding',i:'ON',p:['pAreaOnboarding','p6']},
  {n:'Training & Development',i:'TD',p:['pAreaTraining','p10']},
  {n:'Performance Management',i:'PM',p:['pAreaPerformance','pF','p9']},
- {n:'People & Culture',i:'PC',p:['pAreaPeople','p12','p13','p14','pBirth']},
- {n:'HR Operations',i:'OP',p:['pAreaOps','pG','pProcedures','pChecklists','pDocuments']},
+ {n:'People & Culture',i:'PC',p:['pAreaPeople','p12','p13','p14','pBirth','pProcedures','pChecklists','pDocuments']},
  {n:'The Job Game',i:'JG',p:['pAreaJG','pj1','pj2','pj3']}];
 
 var nav=document.getElementById('nav'),seen={},total=document.querySelectorAll('.panel').length,sub=document.createElement('div');sub.className='sub';
@@ -1215,7 +1358,47 @@ function calc(){var s=st.reduce(function(a,x){return a+(x||0)},0)+jg.value/100,t
  if(tot>70){e.className='ok';e.textContent='Soglia superata: colloquio con il manager'}else{e.className='ko';e.textContent='Sotto la soglia del 70%'}}
 calc();
 /* ===== Checklist kit ===== */
-['09:00–09:15 · Accoglienza e presentazione della giornata','09:20–09:30 · Verifica e accettazione degli accessi con Elia; attivazione Forte e Origin','Consegna e verifica del Nido Pack','Presentazione con Marco','Foto: raccolta e predisposizione della comunicazione Nido Today; pubblicazione solo dopo esito positivo','Pranzo aziendale'].forEach(function(x){var l=document.createElement('label');l.className='chk';l.innerHTML='<input type="checkbox"> '+x;document.getElementById('kit').appendChild(l)});
+[
+  'Verifica esito positivo del colloquio finale e autorizzazione a procedere con il Nido Test',
+  'Conferma candidato, ruolo, sede, data di avvio (martedì) e tutor',
+  { text: 'Raccogli i dati del candidato con messaggio', action: ['email-raccolta-dati','Messaggio Onboard'] },
+  { text: 'Chiedi a Filippo Fondatori di creare il profilo Real Smart con le attività della settimana già inserite', action: ['agenda-pippo-realsmart','Dati agenda a Pippo'] },
+  { text: 'Chiedi a Elia di creare il profilo Google e verifica che sia pronto prima dell’avvio', action: ['ticket-elia-account','Dati ticket a Elia'] },
+  'Il giorno del Nido Test, crea con l’Onboard i profili N-Space One Stop, Origin, Forte e N-Space HR; chiedi a Elia di accettarli',
+  'Crea il profilo Onboard su Nido Academy e Forte e assegna i video tutorial',
+  'Aggiungi il numero di telefono a WhatsApp e invia il contatto a Marco e al tutor',
+  'Inserisci i dati nella Banca Dati HR di N-Space One Stop e crea la cartellina in Payroll',
+  'Organizza su Real Smart l’agenda della prima settimana, coordinandoti con il tutor e i referenti coinvolti',
+  'Prepara e condividi l’agenda con i referenti coinvolti senza inserire password o altri dati di accesso',
+].forEach(function(item){
+  var text = typeof item === 'string' ? item : item.text;
+  var label = document.createElement('label');
+  label.className = 'chk';
+  var checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  label.appendChild(checkbox);
+  label.appendChild(document.createTextNode(' ' + text));
+  var actions = typeof item === 'string' ? [] : (item.actions || (item.action ? [item.action] : []));
+  if (actions.length) {
+    var row = document.createElement('div');
+    row.className = 'chk-action-row';
+    row.appendChild(label);
+    actions.forEach(function(action) {
+      var button = document.createElement('button');
+      button.className = 'btn line';
+      button.type = 'button';
+      button.dataset.textResource = action[0];
+      button.textContent = action[1];
+      row.appendChild(button);
+    });
+    document.getElementById('kit-nido-test-preparation').appendChild(row);
+  } else {
+    document.getElementById('kit-nido-test-preparation').appendChild(label);
+  }
+});
+['Aggiungi la nuova persona a tutte le chat Google pertinenti al lavoro','Inserisci e condividi in Google Calendar gli appuntamenti previsti per l’onboarding'].forEach(function(x){var l=document.createElement('label');l.className='chk';l.innerHTML='<input type="checkbox"> '+x;document.getElementById('kit-onboarding-access').appendChild(l)});
+['09:00–10:00 · Accoglienza, firma della prestazione e accessi ai profili; controlla con Elia che gli account richiesti siano attivi'].forEach(function(x){var l=document.createElement('label');l.className='chk';l.innerHTML='<input type="checkbox"> '+x;document.getElementById('kit-nido-test').appendChild(l)});
+['Consegna e verifica del Nido Pack','Presentazione con Marco','Pranzo tutti insieme','Realizzazione della foto professionale, dopo aver verificato il consenso','Creazione del badge agenti con la foto professionale','Preparazione e pubblicazione su Nido Today della comunicazione con la foto, solo dopo esito positivo del Nido Test e verifica del consenso'].forEach(function(x){var l=document.createElement('label');l.className='chk';l.innerHTML='<input type="checkbox"> '+x;document.getElementById('kit-nido-onboarding').appendChild(l)});
 
 /* ===== Elenchi di domande colloqui ===== */
 var L1=[
@@ -1269,7 +1452,6 @@ var L2TRAPS=[
 ["Rimandare","Ti è capitato di rinviare un compito importante? Come hai gestito la situazione?","Approfondisci il contesto, gli ostacoli e la strategia usata."],
 ["Evitamento","C'è un'attività professionale necessaria che trovi particolarmente sgradevole? Come la affronti?","Chiedi un esempio concreto di lavoro o formazione."],
 ["Mancanza di autovalutazione","Come ti sei accorto/a di dover migliorare in una competenza e che cosa hai fatto concretamente?","Cerca evidenze di feedback, riflessione e azioni successive."],
-["Atteggiamento difensivo","Raccontami una collaborazione in cui ti è stato difficile esprimere il tuo punto di vista.","Chiedi come ha comunicato e che cosa è successo dopo."],
 ["Ragionamento perfetto","Quando devi decidere, quali informazioni ti servono prima di passare all'azione?","Valuta il bilanciamento tra analisi, tempi e decisione."],
 ["Interessi circoscritti","Preferisci approfondire un tema tecnico che conosci o partecipare a un'attività in un ambito nuovo? Perché?","Collega la risposta alle necessità effettive del ruolo."],
 ["Inganno delle aspettative","Come reagisci quando una persona non risponde alle tue aspettative?","Chiedi come chiarisce le aspettative e gestisce il confronto."],
@@ -1294,7 +1476,6 @@ renderQuestionCarousel('l1s',L1);renderQuestionCarousel('ta-inline-l1',L1);rende
 
 /* ===== The Job Game: psicotrappole e psicosoluzioni ===== */
 var TR=[
-["Atteggiamento difensivo","AGIRE","Fidarsi è bene, ma non fidarsi è meglio.","Ci si difende in via preventiva: l’atteggiamento chiuso genera proprio l’ostilità temuta.",["Per un mese, a ogni pensiero difensivo scrivi 3 spiegazioni neutre o positive dell’evento.","Ogni settimana, in un contesto sicuro, condividi un piccolo dubbio o chiedi un confronto.","Proponi un piccolo progetto comune a una persona verso cui eri diffidente."]],
 ["Evitamento","AGIRE","Porto addosso le ferite di tutte le battaglie che ho evitato.","Si evita ciò che spaventa: il sollievo momentaneo rinforza la paura e restringe la vita.",["Affronta la situazione temuta 5 minuti al giorno e annota sensazioni e pensieri.","Ogni settimana aggiungi 5 minuti di esposizione e pratica respirazione.","Una sessione completa da 60 minuti e riflessione su quanto l’evitamento è calato."]],
 ["Insistere","AGIRE","Follia è fare la stessa cosa aspettandosi risultati diversi.","Si ripete la stessa soluzione inefficace, peggiorando il problema.",["Per ogni progetto in stallo: dopo 2 tentativi falliti cambi approccio.","Registra quante volte cambi strategia e i risultati ottenuti.","Dopo 2 insuccessi, 10 minuti di brainstorming con il team."]],
 ["L’aiuto che danneggia: chiedere aiuto","AGIRE","Dipendere troppo dagli altri spegne la forza dentro di noi.","Si chiede aiuto anche per cose semplici: non si costruisce mai fiducia in sé.",["Prima di chiedere aiuto scrivi almeno 3 soluzioni autonome.","Per 2 settimane tieni un diario: situazione, a chi hai chiesto, risultato, cosa avresti potuto fare da solo.","Quando ti chiedono aiuto rispondi con una domanda: “Tu cosa faresti?”."]],
@@ -1330,10 +1511,10 @@ document.querySelectorAll('.fbar').forEach(function(f){var box=document.getEleme
  function ap(){var q=inp.value.toLowerCase().trim();box.querySelectorAll('details').forEach(function(d){d.hidden=!((!m||d.dataset.m===m)&&(!q||d.dataset.s.indexOf(q)>-1))})}
  inp.oninput=ap;f.querySelectorAll('button').forEach(function(b){b.onclick=function(){m=b.dataset.m;f.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});ap()}})});
 </script>
-<script src="/planner-core.js"></script>
-<script src="/planner-ui.js"></script>
-<script src="/workflow-ui.js"></script>
-<script src="/template-ui.js"></script>
-<script src="/learning-ui.js"></script>
+<script src="./planner-core.js"></script>
+<script src="./planner-ui.js"></script>
+<script src="./workflow-ui.js"></script>
+<script src="./template-ui.js"></script>
+<script src="./learning-ui.js"></script>
 </body>
 </html>

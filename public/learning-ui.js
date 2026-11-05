@@ -9,8 +9,7 @@
     ['Onboarding', 'pAreaOnboarding', 'Nuovi ingressi, tutor, accessi e Nido Test'],
     ['Training & Development', 'pAreaTraining', 'Formazione, Academy, Role Play ed eventi'],
     ['Performance Management', 'pAreaPerformance', 'Forte, valutazioni e sviluppo'],
-    ['People & Culture', 'pAreaPeople', 'Cultura, clima, conflitti e uscite'],
-    ['HR Operations', 'pAreaOps', 'Governance, documenti e checklist'],
+    ['People & Culture', 'pAreaPeople', 'Cultura, governance, clima, agende, conflitti e uscite'],
     ['The Job Game', 'pAreaJG', 'Test, psicotrappole e psicosoluzioni'],
   ]
   var stages = [
@@ -21,7 +20,7 @@
       items: [
         { id: 'values', area: 'people', type: 'Procedura', title: 'Valori e Cultura', target: 'p12' },
         { id: 'evolution', area: 'onboarding', type: 'Materiale', title: 'NIDO HR EVOLUTION PATH', resource: '/documenti/nido-hr-evolution-path.pdf' },
-        { id: 'guide', area: 'operations', type: 'Materiale', title: 'Istruzioni della Guida HR', resource: '/documenti/istruzioni-guida-hr.pdf' },
+        { id: 'guide', area: 'people', type: 'Materiale', title: 'Istruzioni della Guida HR', resource: '/documenti/istruzioni-guida-hr.pdf' },
       ],
     },
     {
@@ -63,18 +62,18 @@
     {
       id: 'development',
       title: 'Livello 5 · Formazione e sviluppo',
-      description: 'Studia Academy, materiali dei livelli, Role Play ed eventi formativi.',
+      description: 'Studia Academy, materiali degli step successivi al Nido Test, Role Play ed eventi formativi.',
       items: [
         { id: 'training', area: 'training', type: 'Procedura', title: 'Formazione ed Eventi', target: 'p10' },
-        { id: 'level1', area: 'training', type: 'Materiale', title: 'Materiale Level 1', resource: '/documenti/materiale-level-1.pdf' },
-        { id: 'level2', area: 'training', type: 'Materiale', title: 'Materiale Level 2', resource: '/documenti/materiale-level-2.pdf' },
-        { id: 'level3', area: 'training', type: 'Materiale', title: 'Materiale Level 3', resource: '/documenti/materiale-level-3.pdf' },
+        { id: 'level1', area: 'training', type: 'Materiale', title: 'Materiale Step 1', resource: '/documenti/materiale-level-1.pdf' },
+        { id: 'level2', area: 'training', type: 'Materiale', title: 'Materiale Step 2', resource: '/documenti/materiale-level-2.pdf' },
+        { id: 'level3', area: 'training', type: 'Materiale', title: 'Materiale Step 3', resource: '/documenti/materiale-level-3.pdf' },
       ],
     },
     {
       id: 'advanced',
       title: 'Livello 6 · Performance e operazioni HR',
-      description: 'Completa la formazione con performance, amministrazione, governance e people operations.',
+      description: 'Completa la formazione con performance, amministrazione e processi di People & Culture.',
       items: [
         { id: 'forte', area: 'performance', type: 'Procedura', title: 'Sistema Forte', target: 'pF' },
         { id: 'academy', area: 'performance', type: 'Procedura', title: 'Forte e Nido Academy', target: 'p9' },
@@ -82,7 +81,7 @@
         { id: 'timeoff', area: 'payroll', type: 'Procedura', title: 'Time-Off', target: 'p11' },
         { id: 'payroll', area: 'payroll', type: 'Procedura', title: 'Lettura busta paga', target: 'pB' },
         { id: 'transparency', area: 'payroll', type: 'Procedura', title: 'Trasparenza salariale', target: 'p15' },
-        { id: 'governance', area: 'operations', type: 'Procedura', title: 'Governance e clima', target: 'pG' },
+        { id: 'governance', area: 'people', type: 'Procedura', title: 'Governance e clima', target: 'pAreaPeople' },
         { id: 'climate', area: 'people', type: 'Materiale', title: 'Questionario clima', resource: '/documenti/questionario-clima.pdf' },
         { id: 'conflicts', area: 'people', type: 'Procedura', title: 'Risoluzione conflitti', target: 'p13' },
         { id: 'exit', area: 'people', type: 'Procedura', title: 'Nido Exit', target: 'p14' },

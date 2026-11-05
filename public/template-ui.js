@@ -49,7 +49,7 @@
         materials: ['Scheda Onboard', 'Agenda della settimana', 'Stato degli accessi', 'Nido Pack'],
         notes: 'Non inserire password nei documenti condivisi. La pubblicazione su Nido Today avviene solo dopo esito positivo.',
         steps: [
-          'Conferma sede, data, ruolo, tutor e responsabile Onboard',
+          'Conferma sede, data, ruolo e tutor',
           'Invia la raccolta dati e verifica i documenti richiesti',
           'Richiedi gli account e registra soltanto lo stato degli accessi',
           'Condividi agenda, scheda Onboard e messaggio con il tutor',

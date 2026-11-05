@@ -8,12 +8,28 @@
   var PROGRESS_KEY = 'nidoHrProcedureProgressV1'
   var TEXT_RESOURCES = {
     'email-raccolta-dati': {
-      title: 'E-mail raccolta dati',
-      text: 'Oggetto: Dati e documenti per l’avvio del Nido Test\n\nCiao [Nome],\nper preparare il tuo avvio nel percorso Nido Test, ti chiediamo di completare la raccolta dei dati e dei documenti indicati nella procedura aggiornata.\n\nTrovi la checklist e la cartella di riferimento qui: [Link Documenti].\nUtilizza esclusivamente il canale indicato dall’HR e non inviare password o credenziali.\n\nQuando hai completato il caricamento, rispondi a questa e-mail per conferma. Se un documento non è disponibile, segnalalo senza inviare dati alternativi non richiesti.\n\nGrazie,\nTeam HR · Il Nido Immobiliare',
+      title: 'Messaggio raccolta dati · Onboard',
+      text: 'Ciao X,\n\nti scrivo per richiederti le informazioni necessarie per procedere con l’attivazione dei tuoi account aziendali e per la gestione delle pratiche relative al tuo inserimento.\n\nTi chiedo cortesemente di inviarmi:\n\n- La copia di un documento d’identità in corso di validità;\n- L’indirizzo esatto di residenza (e di domicilio, se differente);\n- I tuoi recapiti personali (numero di cellulare e indirizzo e-mail);\n- Un contatto di emergenza (nome, cognome, numero di telefono e rapporto con la persona, es. genitore, partner, ecc.);\n- Il tuo codice IBAN personale.\n\nNe approfitto per confermarti il nostro incontro di XX.\n\nA presto,\n\nHR de Il Nido Immobiliare',
+    },
+    'email-raccolta-dati-corporate': {
+      title: 'E-mail raccolta dati · Corporate',
+      text: 'Ciao [NOME],\n\ncon questa e-mail ti diamo ufficialmente il benvenuto in [NOME AZIENDA]!\n\nSiamo felici di averti nella nostra squadra e non vediamo l’ora di iniziare questo percorso insieme.\n\nINFORMAZIONI SULL’INSERIMENTO\n- Ruolo: [RUOLO / MANSIONE]\n- Tipologia di rapporto: [CONTRATTO / TIROCINIO / APPRENDISTATO / ALTRO]\n- Data prevista di inizio: [DATA]\n- Sede di lavoro: [SEDE]\n- Referente aziendale: [NOME E COGNOME]\n- Tutor (se previsto): [NOME E COGNOME]\n- Orario di lavoro: [ORARIO / MONTE ORE SETTIMANALE]\n\n[EVENTUALI INFORMAZIONI PERSONALIZZATE SULL’INGRESSO, SULLA FORMAZIONE O SULL’ORGANIZZAZIONE DELLE PRIME GIORNATE.]\n\nDOCUMENTAZIONE E DATI NECESSARI PER L’ATTIVAZIONE\nPer poter procedere con l’attivazione del rapporto di lavoro e con gli adempimenti amministrativi necessari, ti chiediamo gentilmente di inviarci quanto segue.\n\n1. DOCUMENTI PERSONALI\n- Copia di un documento d’identità in corso di validità (fronte e retro).\n- Copia del codice fiscale o della tessera sanitaria.\n- Eventuale permesso di soggiorno in corso di validità, se applicabile.\n\n2. DATI ANAGRAFICI E RECAPITI\n- Indirizzo completo di residenza (via, numero civico, CAP, Comune e Provincia).\n- Indirizzo di domicilio, se diverso dalla residenza.\n- Numero di cellulare.\n- Indirizzo e-mail personale.\n- Luogo e data di nascita.\n- Cittadinanza.\n\n3. INFORMAZIONI FORMATIVE E PROFESSIONALI\n- Titolo di studio conseguito, specificando istituto/università, luogo e data di conseguimento.\n- Eventuali qualifiche, attestati o certificazioni professionali rilevanti.\n- Eventuale documentazione relativa alla cessazione di precedenti rapporti di lavoro, se necessaria.\n- Scheda Anagrafico-Professionale (SAP), ove richiesta per la tipologia di inserimento.\n\nPer ottenere la SAP, se necessaria, puoi:\n- Online: scaricarla tramite il portale regionale Lavoro per Te Toscana, accedendo con SPID, CIE o CNS.\n- Tramite il Centro per l’Impiego: richiederla direttamente presso il CPI di riferimento, eventualmente fissando un appuntamento.\n\n4. DATI PER L’ACCREDITO\n- Codice IBAN del conto corrente sul quale desideri ricevere gli accrediti.\n- Intestatario del conto corrente (se diverso dal lavoratore).\n\n5. CONTATTO DI EMERGENZA\n- Nome e cognome.\n- Numero di telefono.\n- Rapporto di parentela o relazione (es. genitore, partner, familiare).\n\n6. ULTERIORI INFORMAZIONI\n[INSERIRE EVENTUALI ULTERIORI DATI O DOCUMENTI NECESSARI IN BASE ALLA TIPOLOGIA CONTRATTUALE.]\n\nCOME INVIARE LA DOCUMENTAZIONE\nPuoi rispondere direttamente a questa e-mail, inserendo le informazioni richieste nel testo e allegando i relativi documenti.\n\nTi chiediamo, se possibile, di inviarci tutto entro il [DATA DI SCADENZA], così da consentirci di completare per tempo le procedure amministrative e organizzare al meglio il tuo ingresso in azienda.\n\nPer qualsiasi dubbio o necessità di supporto, non esitare a contattarci: saremo felici di aiutarti.\n\nAncora benvenuto/a in [NOME AZIENDA]!\n\nA presto,\n\n[NOME E COGNOME]\n[RUOLO AZIENDALE]\n[NOME AZIENDA]\n[RECAPITO TELEFONICO]\n[INDIRIZZO E-MAIL]',
+    },
+    'messaggio-benvenuto-onboard': {
+      title: 'Benvenuto/a · avvio onboarding dopo Check Academy',
+      text: 'Benvenuto/a al Nido Immobiliare!\n\nSiamo entusiasti di darti il benvenuto nel nostro team e di iniziare insieme questo nuovo percorso professionale.\n\nIl Nido Immobiliare è una delle principali agenzie immobiliari della Toscana, con sedi strategiche a Pistoia, Agliana e Quarrata.\n\nI nostri valori\nLa nostra missione è fare felici i clienti e supportarli nel percorso di compravendita. Per questo, la nostra visione aziendale è quella di una vera e propria famiglia, che accoglie tutte le persone che vogliono migliorare e crescere.\n\nLa prima impressione è importante!\nIn agenzia, l’aspetto è una parte fondamentale nel comunicare professionalità e competenza ai nostri clienti, e per questo cerchiamo di mantenere uno stile elegante e curato.\n\nIl tuo ruolo nel nostro successo\nAnche se sei appena entrato a far parte del nostro team, il tuo contributo è fondamentale per il successo dell’azienda. Crediamo che ogni nuovo membro porti con sé nuove idee, energie e prospettive che arricchiscono la nostra squadra e ci aiutano a crescere insieme.\n\nProgramma della prima giornata di lunedì (xxx)\nPer farti conoscere meglio la nostra realtà, abbiamo organizzato le seguenti attività per la tua prima giornata:\n- Presentazione del percorso formativo: illustreremo il percorso di formazione e crescita professionale che abbiamo pianificato per te.\n- Incontro con i colleghi: avrai l’opportunità di conoscere i membri del team.\n- Pranzo in agenzia: concluderemo la mattinata con un pranzo offerto dall’agenzia, un momento per conoscersi meglio e favorire lo spirito di squadra.\n\nSiamo certi che insieme raggiungeremo grandi traguardi e non vediamo l’ora di iniziare questa avventura con te!\n\nBenvenuto/a a bordo!\n\n✨\n\nHR de il Nido Immobiliare',
+    },
+    'ticket-elia-account': {
+      title: 'Dati per ticket account · Elia',
+      text: 'Ciao Elia,\nper il ticket di creazione/attivazione degli account aziendali:\n\nNome e Cognome: [NOME E COGNOME]\nNumero di telefono: [NUMERO]\nE-mail personale: [E-MAIL]\nUfficio di riferimento: [UFFICIO]\nTutor: [NOME TUTOR]',
+    },
+    'agenda-pippo-realsmart': {
+      title: 'Dati per agenda Real Smart · Pippo',
+      text: 'Ciao Pippo,\nper la creazione dell’agenda della prima settimana su Real Smart:\n\nNome e Cognome: [NOME E COGNOME]\nNumero di telefono: [NUMERO]\nE-mail personale: [E-MAIL]\nUfficio di riferimento: [UFFICIO]\nTutor: [NOME TUTOR]',
     },
     'scheda-onboard-tutor': {
       title: 'Scheda Onboard per il tutor',
-      text: 'SCHEDA ONBOARD · USO INTERNO\n\nNome e cognome: [Nome]\nRuolo / percorso: [Ruolo]\nSede: [Sede]\nData di avvio: [Data]\nTutor: [Tutor]\nResponsabile Onboard: [Responsabile]\n\nAgenda della settimana: [Link o riferimento]\nObiettivi e attività previste: [Sintesi]\nAccessi — solo stato, mai password:\n- Real Smart: [Richiesto / Attivo / Bloccato]\n- Google Drive / N-Space: [Richiesto / Attivo / Bloccato]\n- Forte: [Predisposto / Attivo / Bloccato]\n- Origin: [Predisposto / Attivo / Bloccato]\n\nOsservazioni per l’affiancamento: [Fatti osservabili, non dati personali]\nCheck tutor: [Martedì 18:00] [Giovedì 18:00]\nValutazioni: [Nido Academy] [Forte Academy] [Checklist Forte]\nEsito finale e motivazione: [Da compilare venerdì]',
+      text: 'SCHEDA ONBOARD · USO INTERNO\n\nNome e cognome: [Nome]\nRuolo / percorso: [Ruolo]\nSede: [Sede]\nData di avvio: [Data]\n      Tutor: [Tutor]\n\nAgenda della settimana: [Link o riferimento]\nObiettivi e attività previste: [Sintesi]\nAccessi — solo stato, mai password:\n- Real Smart: [Richiesto / Attivo / Bloccato]\n- Google Drive / N-Space: [Richiesto / Attivo / Bloccato]\n- Forte: [Predisposto / Attivo / Bloccato]\n- Origin: [Predisposto / Attivo / Bloccato]\n\nOsservazioni per l’affiancamento: [Fatti osservabili, non dati personali]\nCheck tutor: [Martedì 18:00] [Giovedì 18:00]\nValutazioni: [Nido Academy] [Forte Academy] [Checklist Forte]\nEsito finale e motivazione: [Da compilare venerdì]',
     },
     'messaggio-standard-tutor': {
       title: 'Messaggio standard per il tutor',
@@ -24,19 +40,31 @@
     ['NIDO HR EVOLUTION PATH','Percorso formativo mensile HR','Pianificazione e sviluppo','Da verificare','Non dichiarata','/documenti/nido-hr-evolution-path.pdf'],
     ['Da Onboard a Real Estate','Completamento del percorso formativo','Onboarding','Da verificare','Non dichiarata','/documenti/da-onboard-a-real-estate.pdf'],
     ['Foglio Raffica','Domande opzionali per il colloquio','Talent Acquisition','Da verificare','Non dichiarata','/documenti/foglio-raffica.pdf'],
-    ['Materiale Level 1','Materiale Academy Property Finder','Learning & Development','Da verificare','Non dichiarata','/documenti/materiale-level-1.pdf'],
-    ['Materiale Level 2','Materiale Academy Listing Advisor','Learning & Development','Da verificare','Non dichiarata','/documenti/materiale-level-2.pdf'],
-    ['Materiale Level 3','Materiale Academy Buy Advisor','Learning & Development','Da verificare','Non dichiarata','/documenti/materiale-level-3.pdf'],
+    ['Materiale Step 1','Materiale Academy Property Finder','Learning & Development','Da verificare','Non dichiarata','/documenti/materiale-level-1.pdf'],
+    ['Materiale Step 2','Materiale Academy Listing Advisor','Learning & Development','Da verificare','Non dichiarata','/documenti/materiale-level-2.pdf'],
+    ['Materiale Step 3','Materiale Academy Buy Advisor','Learning & Development','Da verificare','Non dichiarata','/documenti/materiale-level-3.pdf'],
     ['Questionario clima','Raccolta strutturata sul clima aziendale','People & Culture','Da verificare','Non dichiarata','/documenti/questionario-clima.pdf'],
     ['Checklist uscita','Controlli del processo Nido Exit','Uscita','Da verificare','Non dichiarata','/documenti/checklist-uscita.html'],
     ['Modulo Nido Exit','Modulo operativo per l’uscita','Uscita','Da verificare','Non dichiarata','/documenti/modulo-nido-exit.html'],
     ['E-mail raccolta dati','Template copiabile per l’avvio','Onboarding','Da verificare','Non dichiarata','text:email-raccolta-dati'],
+    ['Messaggio benvenuto Onboard','Template da inviare dopo Check Academy per avvio onboarding','Onboarding','Da verificare','Non dichiarata','text:messaggio-benvenuto-onboard'],
+    ['Dati ticket account · Elia','Promemoria dati necessari per ticket di creazione account','Onboarding','Da verificare','Non dichiarata','text:ticket-elia-account'],
+    ['Dati agenda Real Smart · Pippo','Promemoria dati necessari per creare agenda Real Smart','Onboarding','Da verificare','Non dichiarata','text:agenda-pippo-realsmart'],
     ['Scheda Onboard tutor','Scheda interna per tutor e accessi','Onboarding','Da verificare','Non dichiarata','text:scheda-onboard-tutor'],
     ['Messaggio standard tutor','Comunicazione pronta per il tutor','Onboarding','Da verificare','Non dichiarata','text:messaggio-standard-tutor'],
     ['Istruzioni Guida HR','Istruzioni per utilizzare il sistema','Sistema','Generato e verificato','Sistema 1.0','/documenti/istruzioni-guida-hr.pdf'],
     ['Checklist controllo processo HR','Controlli trasversali del processo','Sistema','Generato e verificato','Sistema 1.0','/documenti/checklist-controllo-processo-hr.pdf'],
     ['Modelli operativi HR','Raccolta dei template copiabili','Sistema','Generato e verificato','Sistema 1.0','/documenti/modelli-operativi-hr.pdf'],
     ['Riepilogo processo HR','Sintesi delle fasi e delle dipendenze','Sistema','Generato e verificato','Sistema 1.0','/documenti/riepilogo-processo-hr.pdf'],
+    ['Psicosoluzioni · Autosabotaggio','Approfondimento The Job Game','The Job Game','Ricevuto · da verificare','Non dichiarata','/documenti/the-job-game/autosabotaggio.pdf'],
+    ['Psicosoluzioni · Conoscenza definitiva','Approfondimento The Job Game','The Job Game','Ricevuto · da verificare','Non dichiarata','/documenti/the-job-game/conoscenza-definitiva.pdf'],
+    ['Psicosoluzioni · Difendersi preventivamente','Approfondimento The Job Game','The Job Game','Ricevuto · da verificare','Non dichiarata','/documenti/the-job-game/difendersi-preventivamente.pdf'],
+    ['Psicosoluzioni · Aiuto che danneggia','Esercizi The Job Game','The Job Game','Ricevuto · da verificare','Non dichiarata','/documenti/the-job-game/aiuto-che-danneggia.pdf'],
+    ['Psicosoluzioni · Rimandare','Approfondimento The Job Game','The Job Game','Ricevuto · da verificare','Non dichiarata','/documenti/the-job-game/rimandare.pdf'],
+    ['Psicosoluzioni · Silenzio assoluto','Approfondimento The Job Game','The Job Game','Ricevuto · da verificare','Non dichiarata','/documenti/the-job-game/silenzio-assoluto.pdf'],
+    ['Torneo Padel · programma','Programma edizione precedente','Eventi','Ricevuto · da verificare','Non dichiarata','/documenti/Programma_Torneo_Padel.pdf'],
+    ['Torneo Padel · segnapunti','Materiale edizione precedente','Eventi','Ricevuto · da verificare','Non dichiarata','/documenti/NIDO_PADEL_Segnapunti.pdf'],
+    ['Torneo Padel · materiale v2','Materiale edizione precedente','Eventi','Ricevuto · da verificare','Non dichiarata','/documenti/NIDO_PADEL_v2.pdf'],
     ['Checklist raccolta dati Onboard','Checklist ufficiale richiamata dalla procedura','Onboarding','Mancante','Non disponibile',''],
     ['Procedura Banca Dati HR e profili','Procedura ufficiale per dati e profili','Sistemi HR','Mancante','Non disponibile',''],
   ]
@@ -205,22 +233,24 @@
         diagnostic.appendChild(node('strong', '', dependency.status))
         diagnostic.appendChild(node('div', '', 'Materiale necessario: ' + dependency.need))
         body.appendChild(diagnostic)
-      } else {
-        body.appendChild(node('p', 'ops-note', 'Documento interno al progetto.'))
       }
-      var frame = node('iframe', 'resource-frame')
-      frame.src = url
-      frame.title = title || 'Risorsa'
-      body.appendChild(frame)
-      if (!/^https?:/.test(url) && /\.pdf(?:$|\?)/i.test(url)) {
-        var actions = node('div', 'ops-actions')
-        var download = node('a', 'btn lime', 'Scarica PDF')
-        download.href = url
-        download.download = ''
-        download.dataset.allowDownload = 'true'
-        actions.appendChild(download)
-        body.appendChild(actions)
-      }
+      body.appendChild(node('p', 'ops-note', 'L’anteprima incorporata non è disponibile. Apri la risorsa direttamente oppure copia il link per ritrovarla su Google Drive.'))
+      var actions = node('div', 'ops-actions')
+      var open = node('a', 'btn lime', 'Apri risorsa')
+      open.href = url
+      open.target = '_blank'
+      open.rel = 'noopener noreferrer'
+      actions.appendChild(open)
+      var copyLink = button('Copia link', function () {
+        copyText(new URL(url, window.location.href).href, copyLink)
+      }, 'btn line')
+      actions.appendChild(copyLink)
+      var driveSearch = node('a', 'btn line', 'Cerca il titolo su Google Drive')
+      driveSearch.href = 'https://drive.google.com/drive/u/0/search?q=' + encodeURIComponent(title || url)
+      driveSearch.target = '_blank'
+      driveSearch.rel = 'noopener noreferrer'
+      actions.appendChild(driveSearch)
+      body.appendChild(actions)
     }
     dialog.showModal()
   }
